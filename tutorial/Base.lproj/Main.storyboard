@@ -1,11 +1,40 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9532" systemVersion="15D21" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9532" systemVersion="15D21" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="XnT-xT-3MD">
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9530"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
+        <!--Table View Controller-->
+        <scene sceneID="fYs-Vo-c0q">
+            <objects>
+                <tableViewController id="XnT-xT-3MD" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="8rb-VB-M20">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="Ls2-vr-hbJ">
+                                <rect key="frame" x="0.0" y="28" width="600" height="44"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="Ls2-vr-hbJ" id="dfV-m8-YV8">
+                                    <rect key="frame" x="0.0" y="0.0" width="600" height="43.5"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                </tableViewCellContentView>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="XnT-xT-3MD" id="1ay-5P-bdh"/>
+                            <outlet property="delegate" destination="XnT-xT-3MD" id="5aw-Hy-uwm"/>
+                        </connections>
+                    </tableView>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="d0g-ZF-12s" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-966.5" y="366"/>
+        </scene>
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
@@ -21,8 +50,8 @@
                             <stackView opaque="NO" contentMode="scaleToFill" misplaced="YES" axis="vertical" alignment="top" spacing="12" translatesAutoresizingMaskIntoConstraints="NO" id="Wrv-O3-2XB">
                                 <rect key="frame" x="37" y="80" width="560" height="105"/>
                                 <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Song name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="129-SK-gyY">
-                                        <rect key="frame" x="0.0" y="0.0" width="87" height="21"/>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Search" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="129-SK-gyY">
+                                        <rect key="frame" x="0.0" y="0.0" width="54" height="21"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                         <nil key="highlightedColor"/>
@@ -45,13 +74,30 @@
                                     <constraint firstItem="oco-7J-1Cv" firstAttribute="leading" secondItem="Wrv-O3-2XB" secondAttribute="leading" id="mEk-mh-ZBX"/>
                                 </constraints>
                             </stackView>
+                            <imageView contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" placeholderIntrinsicWidth="240" placeholderIntrinsicHeight="128" image="DefImage" translatesAutoresizingMaskIntoConstraints="NO" id="m4l-bi-D7J">
+                                <rect key="frame" x="200" y="204.5" width="200" height="200"/>
+                                <gestureRecognizers/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="m4l-bi-D7J" secondAttribute="height" multiplier="1:1" id="o4m-pg-CyY"/>
+                                </constraints>
+                                <connections>
+                                    <outletCollection property="gestureRecognizers" destination="lGt-e6-XrV" appends="YES" id="Sfw-yn-Hsf"/>
+                                </connections>
+                            </imageView>
+                            <view contentMode="scaleToFill" fixedFrame="YES" placeholderIntrinsicWidth="44" placeholderIntrinsicHeight="240" translatesAutoresizingMaskIntoConstraints="NO" id="8Mk-Z8-3tG" customClass="RatingControl" customModule="tutorial" customModuleProvider="target">
+                                <rect key="frame" x="9" y="475" width="414" height="67"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </view>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="Wrv-O3-2XB" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="3JE-U1-3dr"/>
                             <constraint firstAttribute="trailingMargin" secondItem="Wrv-O3-2XB" secondAttribute="trailing" id="CDf-0i-fid"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="m4l-bi-D7J" secondAttribute="trailing" constant="80" id="IJl-8S-n8a"/>
+                            <constraint firstItem="m4l-bi-D7J" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="80" id="Qzh-Fs-q2e"/>
                             <constraint firstAttribute="trailingMargin" secondItem="Wrv-O3-2XB" secondAttribute="trailing" id="TUp-z0-D0Z"/>
                             <constraint firstItem="Wrv-O3-2XB" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="47" id="Yus-PR-gfI"/>
+                            <constraint firstItem="m4l-bi-D7J" firstAttribute="top" secondItem="Wrv-O3-2XB" secondAttribute="bottom" constant="20" id="ZhK-Dt-RsK"/>
                             <constraint firstItem="Wrv-O3-2XB" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="60" id="lx2-YP-Gqg"/>
                         </constraints>
                         <variation key="default">
@@ -61,13 +107,24 @@
                         </variation>
                     </view>
                     <connections>
+                        <outlet property="addButton" destination="Xdb-3V-yq4" id="n6e-OU-WvY"/>
                         <outlet property="nameTextField" destination="oco-7J-1Cv" id="tR5-S6-7gR"/>
+                        <outlet property="photoImageView" destination="m4l-bi-D7J" id="RdE-uG-Eee"/>
+                        <outlet property="ratingControl" destination="8Mk-Z8-3tG" id="lhm-gD-Pdb"/>
                         <outlet property="songNameLabel" destination="129-SK-gyY" id="Elc-uX-EVQ"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+                <tapGestureRecognizer id="lGt-e6-XrV">
+                    <connections>
+                        <action selector="selectImageFromPhotoLibrary:" destination="BYZ-38-t0r" id="62p-qg-gRh"/>
+                    </connections>
+                </tapGestureRecognizer>
             </objects>
             <point key="canvasLocation" x="245" y="337"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="DefImage" width="160" height="160"/>
+    </resources>
 </document>
