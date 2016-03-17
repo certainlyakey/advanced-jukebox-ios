@@ -7,22 +7,42 @@
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
-        <!--Table View Controller-->
+        <!--Song Table View Controller-->
         <scene sceneID="fYs-Vo-c0q">
             <objects>
-                <tableViewController id="XnT-xT-3MD" sceneMemberID="viewController">
-                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="8rb-VB-M20">
+                <tableViewController id="XnT-xT-3MD" customClass="SongTableViewController" customModule="tutorial" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="90" sectionHeaderHeight="28" sectionFooterHeight="28" id="8rb-VB-M20">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="Ls2-vr-hbJ">
-                                <rect key="frame" x="0.0" y="28" width="600" height="44"/>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" reuseIdentifier="SongTableViewCell" rowHeight="90" id="Ls2-vr-hbJ" customClass="SongTableViewCell" customModule="tutorial" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="28" width="600" height="90"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="Ls2-vr-hbJ" id="dfV-m8-YV8">
-                                    <rect key="frame" x="0.0" y="0.0" width="600" height="43.5"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="600" height="89.5"/>
                                     <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="DefImage" translatesAutoresizingMaskIntoConstraints="NO" id="o6X-sT-NYa">
+                                            <rect key="frame" x="0.0" y="0.0" width="94" height="89.5"/>
+                                        </imageView>
+                                        <view userInteractionEnabled="NO" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="lcH-gS-mbe" customClass="RatingControl" customModule="tutorial" customModuleProvider="target">
+                                            <rect key="frame" x="110" y="43" width="219" height="46.5"/>
+                                            <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        </view>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HPz-vh-KDs">
+                                            <rect key="frame" x="110" y="0.0" width="472" height="41"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
                                 </tableViewCellContentView>
+                                <connections>
+                                    <outlet property="name" destination="HPz-vh-KDs" id="PfH-EW-NFt"/>
+                                    <outlet property="photoImageView" destination="o6X-sT-NYa" id="wu2-3m-kwv"/>
+                                    <outlet property="ratingControl" destination="lcH-gS-mbe" id="yVS-l3-aKJ"/>
+                                </connections>
                             </tableViewCell>
                         </prototypes>
                         <connections>
@@ -33,7 +53,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="d0g-ZF-12s" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-966.5" y="366"/>
+            <point key="canvasLocation" x="-967" y="366"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">

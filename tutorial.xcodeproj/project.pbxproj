@@ -9,6 +9,8 @@
 /* Begin PBXBuildFile section */
 		836950B21C99F0000090B4AF /* RatingControl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 836950B11C99F0000090B4AF /* RatingControl.swift */; };
 		836950B41C9A168F0090B4AF /* Song.swift in Sources */ = {isa = PBXBuildFile; fileRef = 836950B31C9A168F0090B4AF /* Song.swift */; };
+		836950B61C9A19960090B4AF /* SongTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 836950B51C9A19960090B4AF /* SongTableViewCell.swift */; };
+		836950B81C9A1DFA0090B4AF /* SongTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 836950B71C9A1DFA0090B4AF /* SongTableViewController.swift */; };
 		83CE44361C87659D00B7FA5E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83CE44351C87659D00B7FA5E /* AppDelegate.swift */; };
 		83CE44381C87659D00B7FA5E /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83CE44371C87659D00B7FA5E /* ViewController.swift */; };
 		83CE443B1C87659D00B7FA5E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 83CE44391C87659D00B7FA5E /* Main.storyboard */; };
@@ -19,6 +21,8 @@
 /* Begin PBXFileReference section */
 		836950B11C99F0000090B4AF /* RatingControl.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RatingControl.swift; sourceTree = "<group>"; };
 		836950B31C9A168F0090B4AF /* Song.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Song.swift; sourceTree = "<group>"; };
+		836950B51C9A19960090B4AF /* SongTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SongTableViewCell.swift; sourceTree = "<group>"; };
+		836950B71C9A1DFA0090B4AF /* SongTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SongTableViewController.swift; sourceTree = "<group>"; };
 		83CE44321C87659D00B7FA5E /* tutorial.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = tutorial.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		83CE44351C87659D00B7FA5E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		83CE44371C87659D00B7FA5E /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -63,7 +67,9 @@
 				83CE44371C87659D00B7FA5E /* ViewController.swift */,
 				83CE44391C87659D00B7FA5E /* Main.storyboard */,
 				83CE443C1C87659D00B7FA5E /* Assets.xcassets */,
+				836950B71C9A1DFA0090B4AF /* SongTableViewController.swift */,
 				836950B31C9A168F0090B4AF /* Song.swift */,
+				836950B51C9A19960090B4AF /* SongTableViewCell.swift */,
 				836950B11C99F0000090B4AF /* RatingControl.swift */,
 				83CE443E1C87659D00B7FA5E /* LaunchScreen.storyboard */,
 				83CE44411C87659D00B7FA5E /* Info.plist */,
@@ -144,7 +150,9 @@
 			files = (
 				836950B41C9A168F0090B4AF /* Song.swift in Sources */,
 				83CE44381C87659D00B7FA5E /* ViewController.swift in Sources */,
+				836950B61C9A19960090B4AF /* SongTableViewCell.swift in Sources */,
 				836950B21C99F0000090B4AF /* RatingControl.swift in Sources */,
+				836950B81C9A1DFA0090B4AF /* SongTableViewController.swift in Sources */,
 				83CE44361C87659D00B7FA5E /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
