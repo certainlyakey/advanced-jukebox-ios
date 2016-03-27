@@ -1,0 +1,81 @@
+@charset "UTF-8";
+
+/* Layout (global rules for all sizes) */
+
+h1 {
+    line-height: 25px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    text-align: center;
+
+}
+
+body {
+    background-image: url("background.jpg");
+    }
+
+#Container {
+	width:800px;
+    height: auto;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 11px;
+    
+}
+#Header {
+    height: 40px;
+    background-color: antiquewhite;
+    
+}
+#content {
+    width: 400px;
+    height: 400px;
+    background-color: aquamarine;
+    margin-left: 420px;
+    margin-top: 50px;
+    
+}
+#content img {
+     width: 400px;
+    height: 400px;
+    float: right;
+    
+}
+
+#sidebar {
+    margin-top: 10px;
+    width:300px;
+    height: auto;
+    background-color:burlywood;
+    float: left;
+}
+#sidebar img {
+    width: 300px;
+    height: auto;
+    
+    
+}
+#footer {
+    margin-top: 20px;
+    width: auto;
+    height: 100px;
+    background-color: beige;
+}
+
+#footer img {
+    margin: 20px;
+    width: 30px;
+    height: 30px;
+    float: left;
+}
+
+#second img,p1{ 
+    margin-right: 10px;
+    top: 1px;
+float: right;
+    }
+
+.albumart {
+     width: 400px;
+    height: 400px;
+}
