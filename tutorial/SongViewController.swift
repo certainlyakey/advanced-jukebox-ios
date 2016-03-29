@@ -1,5 +1,5 @@
 //
-//  ViewController.swift
+//  SongViewController.swift
 //  tutorial
 //
 //  Created by AleksandrBeliaev on 02/03/16.
@@ -8,7 +8,7 @@
 
 import UIKit
 
-class ViewController: UIViewController,UITextFieldDelegate,UIImagePickerControllerDelegate, UINavigationControllerDelegate {
+class SongViewController: UIViewController,UITextFieldDelegate,UIImagePickerControllerDelegate, UINavigationControllerDelegate {
     
     // MARK: Properties
     @IBOutlet weak var nameTextField: UITextField!
