@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import Firebase
 
 class SongViewController: UIViewController,UITextFieldDelegate,UIImagePickerControllerDelegate, UINavigationControllerDelegate {
     
@@ -15,14 +16,27 @@ class SongViewController: UIViewController,UITextFieldDelegate,UIImagePickerCont
     @IBOutlet weak var songNameLabel: UILabel!
 	@IBOutlet weak var addButton: UIButton!
     
+	
 	@IBOutlet weak var ratingControl: RatingControl!
 	@IBOutlet weak var photoImageView: UIImageView!
 
+    @IBOutlet weak var fbLabel: UILabel!
+    // Create a reference to a Firebase location
+    var myRootRef = Firebase(url:"https://radiant-torch-3216.firebaseio.com")
+    // Write data to Firebase
+	
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Handle the text field’s user input through delegate callbacks.
         nameTextField.delegate = self
     }
+	
+	@IBAction func fbAction(sender: UIButton) {
+		var songinfo = ["album":"IOS!","name":"Money Money Money from iOS","artist":"Rottelini"]
+		var songRef = myRootRef.childByAppendingPath("song")
+		songRef.setValue(songinfo)
+	}
 	
 	func imagePickerControllerDidCancel(picker: UIImagePickerController) {
 		dismissViewControllerAnimated(true, completion: nil)

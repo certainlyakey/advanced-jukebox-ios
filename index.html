@@ -1,11 +1,13 @@
-<!DOCTYPE html >
+<!DOCTYPE html>
 <html>
 	<head>
 		<link href="web-resources/styles.css" rel="stylesheet" type="text/css" />
-		<script src='https://cdn.firebase.com/js/client/2.2.1/firebase.js'></script>
+        <script src='https://code.jquery.com/jquery-2.2.2.min.js'></script>
+        <script src='https://cdn.firebase.com/js/client/2.2.1/firebase.js'></script>
         <title>Advanced Jukebox</title>
-	</head>
-	<body>
+        <meta charset="UTF-8">
+    </head>
+    <body>
         
     <div id="container">
      
@@ -28,15 +30,13 @@
         </div>
                <div id="firstpart">
                    
-                <h2> <img class="play" alt="" src="web-resources/img/play_button.png" /> Speak to me </h2>
+                <h2> <img class="play" alt="" src="web-resources/img/play_button.png" /> <span id="songname">Speak to me</span> </h2>
                 <p>by Pink Floyd</p> 
         </div>
         </div>
     
     </div>
-<script>
-        var myDataRef = new Firebase('https://iwybibby18g.firebaseio-demo.com/');
-        </script>
-	</body>
+		<script src='web-resources/scripts.js'></script>
+    </body>
 </html>
-	
+    
