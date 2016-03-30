@@ -28,32 +28,25 @@ body {
     
 }
 #content {
-    width: 400px;
-    height: 400px;
     background-color: aquamarine;
-    margin-left: 420px;
     margin-top: 50px;
-    
+    text-align:center; 
 }
 #content img {
      width: 400px;
-    height: 400px;
-    float: right;
-    
+    height: 400px;    
 }
 
 #sidebar {
     margin-top: 10px;
     width:300px;
-    height: auto;
     background-color:burlywood;
-    float: left;
+    position:absolute; 
+    top:75px; 
 }
 #sidebar img {
     width: 300px;
     height: auto;
-    
-    
 }
 #footer {
     margin-top: 20px;
@@ -62,20 +55,28 @@ body {
     background-color: beige;
 }
 
-#footer img {
+#footer .profile {
     margin: 20px;
     width: 30px;
     height: 30px;
     float: left;
 }
+.play {
+    width: 30px;
+    height: 30px;
+    margin-right:20px; 
+}
 
-#second img,p1{ 
+#second { 
     margin-right: 10px;
-    top: 1px;
-float: right;
+    float:right; 
     }
 
 .albumart {
      width: 400px;
     height: 400px;
+}
+
+#firstpart {
+    text-align:center; 
 }
