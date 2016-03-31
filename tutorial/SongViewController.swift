@@ -16,6 +16,10 @@ class SongViewController: UIViewController,UITextFieldDelegate,UIImagePickerCont
     @IBOutlet weak var songNameLabel: UILabel!
 	@IBOutlet weak var addButton: UIButton!
     
+
+	@IBOutlet weak var UILabelAlbum: UILabel!
+	@IBOutlet weak var UILabelSong: UILabel!
+	@IBOutlet weak var UILabelArtist: UILabel!
 	
 	@IBOutlet weak var ratingControl: RatingControl!
 	@IBOutlet weak var photoImageView: UIImageView!
@@ -25,6 +29,7 @@ class SongViewController: UIViewController,UITextFieldDelegate,UIImagePickerCont
     var myRootRef = Firebase(url:"https://radiant-torch-3216.firebaseio.com")
     // Write data to Firebase
 	
+
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -33,7 +38,8 @@ class SongViewController: UIViewController,UITextFieldDelegate,UIImagePickerCont
     }
 	
 	@IBAction func fbAction(sender: UIButton) {
-		var songinfo = ["album":"IOS!","name":"Money Money Money from iOS","artist":"Rottelini"]
+		//var songinfo = ["album":"test album","name":"test song","artist":"test artist"]
+		var songinfo = ["album":UILabelAlbum.text!,"name":UILabelSong.text!,"artist":UILabelArtist.text!]
 		var songRef = myRootRef.childByAppendingPath("song")
 		songRef.setValue(songinfo)
 	}
@@ -46,6 +52,7 @@ class SongViewController: UIViewController,UITextFieldDelegate,UIImagePickerCont
 		photoImageView.image = selectedImage
 		dismissViewControllerAnimated(true, completion: nil)
 	}
+
 	
     // MARK: Actions
 	@IBAction func selectImageFromPhotoLibrary(sender: UITapGestureRecognizer) {
