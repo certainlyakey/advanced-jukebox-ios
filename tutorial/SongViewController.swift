@@ -30,12 +30,25 @@ class SongViewController: UIViewController,UITextFieldDelegate,UIImagePickerCont
     // Write data to Firebase
 	
 
+	var song: Song?
     
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        // Handle the text field’s user input through delegate callbacks.
-        nameTextField.delegate = self
-    }
+	override func viewDidLoad() {
+		super.viewDidLoad()
+		
+		// Handle the text field’s user input through delegate callbacks.
+		//nameTextField.delegate = self
+		
+		// Set up views if editing an existing Meal.
+		if let song = song {
+		//	navigationItem.title = song.name
+			UILabelAlbum.text   = song.name
+			UILabelSong.text = song.name
+			UILabelArtist.text = song.name
+		}
+		
+		// Enable the Save button only if the text field has a valid Meal name.
+		//checkValidMealName()
+	}
 	
 	@IBAction func fbAction(sender: UIButton) {
 		//var songinfo = ["album":"test album","name":"test song","artist":"test artist"]

@@ -66,5 +66,21 @@ class SongTableViewController: UITableViewController {
 		return cell
 	}
 	
+	override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+//		if segue.identifier == "ShowDetail" {
+			let songDetailViewController = segue.destinationViewController as! SongViewController
+			
+			// Get the cell that generated this segue.
+			if let selectedSongCell = sender as? SongTableViewCell {
+				let indexPath = tableView.indexPathForCell(selectedSongCell)!
+				let selectedSong = songs[indexPath.row]
+				songDetailViewController.song = selectedSong
+			}
+//		}
+//		else if segue.identifier == "AddItem" {
+//			print("Adding new meal.")
+//		}
+	}
+	
 
 }
