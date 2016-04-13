@@ -26,7 +26,7 @@
 		836950B51C9A19960090B4AF /* SongTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SongTableViewCell.swift; sourceTree = "<group>"; };
 		836950B71C9A1DFA0090B4AF /* SongTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SongTableViewController.swift; sourceTree = "<group>"; };
 		839665531CAC7DD400B1D516 /* tutorial-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "tutorial-Bridging-Header.h"; sourceTree = "<group>"; };
-		83CE44321C87659D00B7FA5E /* tutorial.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = tutorial.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		83CE44321C87659D00B7FA5E /* adv-jukebox.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "adv-jukebox.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		83CE44351C87659D00B7FA5E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		83CE44371C87659D00B7FA5E /* SongViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SongViewController.swift; sourceTree = "<group>"; };
 		83CE443A1C87659D00B7FA5E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -63,7 +63,7 @@
 		83CE44331C87659D00B7FA5E /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				83CE44321C87659D00B7FA5E /* tutorial.app */,
+				83CE44321C87659D00B7FA5E /* adv-jukebox.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -106,9 +106,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		83CE44311C87659D00B7FA5E /* tutorial */ = {
+		83CE44311C87659D00B7FA5E /* adv-jukebox */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 83CE44441C87659D00B7FA5E /* Build configuration list for PBXNativeTarget "tutorial" */;
+			buildConfigurationList = 83CE44441C87659D00B7FA5E /* Build configuration list for PBXNativeTarget "adv-jukebox" */;
 			buildPhases = (
 				849F30C12CA46FDC431FA573 /* Check Pods Manifest.lock */,
 				83CE442E1C87659D00B7FA5E /* Sources */,
@@ -121,9 +121,9 @@
 			);
 			dependencies = (
 			);
-			name = tutorial;
+			name = "adv-jukebox";
 			productName = tutorial;
-			productReference = 83CE44321C87659D00B7FA5E /* tutorial.app */;
+			productReference = 83CE44321C87659D00B7FA5E /* adv-jukebox.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -141,7 +141,7 @@
 					};
 				};
 			};
-			buildConfigurationList = 83CE442D1C87659D00B7FA5E /* Build configuration list for PBXProject "tutorial" */;
+			buildConfigurationList = 83CE442D1C87659D00B7FA5E /* Build configuration list for PBXProject "adv-jukebox" */;
 			compatibilityVersion = "Xcode 3.2";
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
@@ -154,7 +154,7 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				83CE44311C87659D00B7FA5E /* tutorial */,
+				83CE44311C87659D00B7FA5E /* adv-jukebox */,
 			);
 		};
 /* End PBXProject section */
@@ -349,7 +349,7 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = alex.tutorial;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = "adv-jukebox";
 				SWIFT_OBJC_BRIDGING_HEADER = "tutorial/tutorial-Bridging-Header.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				TARGETED_DEVICE_FAMILY = 1;
@@ -366,7 +366,7 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = alex.tutorial;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = "adv-jukebox";
 				SWIFT_OBJC_BRIDGING_HEADER = "tutorial/tutorial-Bridging-Header.h";
 				TARGETED_DEVICE_FAMILY = 1;
 			};
@@ -375,7 +375,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		83CE442D1C87659D00B7FA5E /* Build configuration list for PBXProject "tutorial" */ = {
+		83CE442D1C87659D00B7FA5E /* Build configuration list for PBXProject "adv-jukebox" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				83CE44421C87659D00B7FA5E /* Debug */,
@@ -384,7 +384,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		83CE44441C87659D00B7FA5E /* Build configuration list for PBXNativeTarget "tutorial" */ = {
+		83CE44441C87659D00B7FA5E /* Build configuration list for PBXNativeTarget "adv-jukebox" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				83CE44451C87659D00B7FA5E /* Debug */,

@@ -2,7 +2,7 @@
 <Workspace
    version = "1.0">
    <FileRef
-      location = "group:tutorial.xcodeproj">
+      location = "group:/Users/aleksandrbeliaev/Documents/Study/Advanced Jukebox/advanced-jukebox-ios/adv-jukebox.xcodeproj">
    </FileRef>
    <FileRef
       location = "group:Pods/Pods.xcodeproj">

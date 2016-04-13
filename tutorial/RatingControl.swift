@@ -27,6 +27,7 @@ class RatingControl: UIView {
 	override func layoutSubviews() {
 		// Draw the stars
 		let buttonSize = Int(frame.size.height)
+		// NB! Width of each star equals to the height of parent container
 		var buttonFrame = CGRect(x: 0, y: 0, width: buttonSize, height: buttonSize)
 		
 		// Place the stars
@@ -49,7 +50,7 @@ class RatingControl: UIView {
 			button.setImage(filledStarImage, forState: .Selected)
 			button.setImage(filledStarImage, forState: [.Highlighted, .Selected])
 			button.adjustsImageWhenHighlighted = false
-			button.addTarget(self, action: "ratingButtonTapped:", forControlEvents: .TouchDown)
+			button.addTarget(self, action: #selector(RatingControl.ratingButtonTapped(_:)), forControlEvents: .TouchDown)
 			ratingButtons += [button]
 			addSubview(button)
 		}
