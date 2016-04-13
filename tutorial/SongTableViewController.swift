@@ -23,13 +23,13 @@ class SongTableViewController: UITableViewController {
 		
 		let photo1 = UIImage(named: "dd1")!
 		
-		let song1 = Song(name: "I have been loved by you", photo: photo1, rating: 4, album: "album1", artist: "artist1")!
+		let song1 = Song(name: "I have been loved by you", photo: photo1, rating: 4, album: "My second album", artist: "M. Jackson")!
 		
 		let photo2 = UIImage(named: "dd2")!
-		let song2 = Song(name: "A ya syadu v kabriolet", photo: photo2, rating: 5, album: "kabriolet", artist: "A ya")!
+		let song2 = Song(name: "We are the champions", photo: photo2, rating: 5, album: "Bohemian Rhapsody", artist: "Queen")!
 		
 		let photo3 = UIImage(named: "dd3")!
-		let song3 = Song(name: "Singing Pugs Make It Again", photo: photo3, rating: 3, album: "album3", artist: "artist3")!
+		let song3 = Song(name: "Singing Pugs Make It Again", photo: photo3, rating: 3, album: "Album", artist: "David Bowie")!
 		
 		songs += [song1, song2, song3]
 	}

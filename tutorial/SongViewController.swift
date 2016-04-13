@@ -16,6 +16,13 @@ class SongViewController: UIViewController,UITextFieldDelegate,UIImagePickerCont
     @IBOutlet weak var songNameLabel: UILabel!
 	@IBOutlet weak var addButton: UIButton!
     
+	@IBOutlet weak var VotesNumberLabel: UILabel!
+	
+	var VotesNumber:Int = 0
+	@IBAction func VoteButton(sender: UIButton) {
+		VotesNumber = VotesNumber + 1
+		VotesNumberLabel.text = String(VotesNumber)
+	}
 
 	@IBOutlet weak var UILabelAlbum: UILabel!
 	@IBOutlet weak var UILabelSong: UILabel!
