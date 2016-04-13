@@ -41,9 +41,10 @@ class SongViewController: UIViewController,UITextFieldDelegate,UIImagePickerCont
 		// Set up views if editing an existing Meal.
 		if let song = song {
 		//	navigationItem.title = song.name
-			UILabelAlbum.text   = song.name
+			UILabelAlbum.text  = song.album
 			UILabelSong.text = song.name
-			UILabelArtist.text = song.name
+			UILabelArtist.text = song.artist
+			photoImageView.image = song.photo
 		}
 		
 		// Enable the Save button only if the text field has a valid Meal name.

@@ -106,8 +106,39 @@
                                     <constraint firstItem="oco-7J-1Cv" firstAttribute="leading" secondItem="Wrv-O3-2XB" secondAttribute="leading" id="mEk-mh-ZBX"/>
                                 </constraints>
                             </stackView>
-                            <imageView contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" placeholderIntrinsicWidth="240" placeholderIntrinsicHeight="128" image="DefImage" translatesAutoresizingMaskIntoConstraints="NO" id="m4l-bi-D7J">
-                                <rect key="frame" x="183" y="235" width="200" height="200"/>
+                            <view contentMode="scaleToFill" fixedFrame="YES" placeholderIntrinsicWidth="44" placeholderIntrinsicHeight="240" translatesAutoresizingMaskIntoConstraints="NO" id="8Mk-Z8-3tG" customClass="RatingControl" customModule="tutorial" customModuleProvider="target">
+                                <rect key="frame" x="9" y="475" width="414" height="67"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QlM-sl-z1j">
+                                        <rect key="frame" x="186" y="8" width="175" height="30"/>
+                                        <state key="normal" title="Send info about this song"/>
+                                        <connections>
+                                            <action selector="fbAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="iDL-EH-HgG"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </view>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Album name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="v8z-ZC-8qi">
+                                <rect key="frame" x="258" y="289" width="101" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Artist name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lgN-jF-e4Q">
+                                <rect key="frame" x="258" y="331" width="101" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Song name hello" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="adV-KU-qWE">
+                                <rect key="frame" x="258" y="250" width="197" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" placeholderIntrinsicWidth="240" placeholderIntrinsicHeight="128" image="DefImage" translatesAutoresizingMaskIntoConstraints="NO" id="m4l-bi-D7J">
+                                <rect key="frame" x="37" y="250" width="200" height="200"/>
                                 <gestureRecognizers/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="m4l-bi-D7J" secondAttribute="height" multiplier="1:1" id="o4m-pg-CyY"/>
@@ -116,35 +147,6 @@
                                     <outletCollection property="gestureRecognizers" destination="lGt-e6-XrV" appends="YES" id="Sfw-yn-Hsf"/>
                                 </connections>
                             </imageView>
-                            <view contentMode="scaleToFill" fixedFrame="YES" placeholderIntrinsicWidth="44" placeholderIntrinsicHeight="240" translatesAutoresizingMaskIntoConstraints="NO" id="8Mk-Z8-3tG" customClass="RatingControl" customModule="tutorial" customModuleProvider="target">
-                                <rect key="frame" x="9" y="475" width="414" height="67"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                            </view>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QlM-sl-z1j">
-                                <rect key="frame" x="213" y="420" width="175" height="30"/>
-                                <state key="normal" title="Send info about this song"/>
-                                <connections>
-                                    <action selector="fbAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="iDL-EH-HgG"/>
-                                </connections>
-                            </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Album name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="v8z-ZC-8qi">
-                                <rect key="frame" x="37" y="235" width="101" height="21"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Artist name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lgN-jF-e4Q">
-                                <rect key="frame" x="37" y="301" width="101" height="21"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Song name hello" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="adV-KU-qWE">
-                                <rect key="frame" x="37" y="272" width="197" height="21"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
@@ -182,7 +184,7 @@
                     </connections>
                 </tapGestureRecognizer>
             </objects>
-            <point key="canvasLocation" x="173" y="356"/>
+            <point key="canvasLocation" x="13" y="390"/>
         </scene>
     </scenes>
     <resources>
