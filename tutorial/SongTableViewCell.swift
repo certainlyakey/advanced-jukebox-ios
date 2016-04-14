@@ -13,7 +13,6 @@ class SongTableViewCell: UITableViewCell {
 
 	@IBOutlet weak var name: UILabel!
 	@IBOutlet weak var photoImageView: UIImageView!
-	@IBOutlet weak var ratingControl: RatingControl!
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code

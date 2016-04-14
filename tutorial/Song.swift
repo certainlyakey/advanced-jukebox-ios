@@ -14,7 +14,6 @@ class Song {
 	var id: Int
 	var name: String
 	var photo: UIImage?
-	var rating: Int
 	var votes: Int
 	var album: String?
 	var artist: String?
@@ -26,7 +25,6 @@ class Song {
 		id: Int,
 		name: String,
 		photo: UIImage?,
-		rating: Int,
 		votes: Int,
 		album: String?,
 		artist: String?,
@@ -35,13 +33,12 @@ class Song {
 		self.id = id
 		self.name = name
 		self.photo = photo
-		self.rating = rating
 		self.votes = votes
 		self.album = album
 		self.artist = artist
 		self.voted = voted
 		
-		if name.isEmpty || rating < 0 {
+		if name.isEmpty || id < 1 {
 			return nil
 		}
 	}

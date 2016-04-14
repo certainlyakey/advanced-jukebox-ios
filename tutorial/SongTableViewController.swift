@@ -27,7 +27,6 @@ class SongTableViewController: UITableViewController {
 			id: 1,
 			name: "I have been loved by you",
 			photo: photo1,
-			rating: 4,
 			votes:0,
 			album: "My second album",
 			artist: "M. Jackson",
@@ -39,7 +38,6 @@ class SongTableViewController: UITableViewController {
 			id: 2,
 			name: "We are the champions",
 			photo: photo2,
-			rating: 5,
 			votes:0,
 			album: "Bohemian Rhapsody",
 			artist: "Queen",
@@ -51,7 +49,6 @@ class SongTableViewController: UITableViewController {
 			id: 3,
 			name: "Singing Pugs Make It Again",
 			photo: photo3,
-			rating: 3,
 			votes:0,
 			album: "Album",
 			artist: "David Bowie",
@@ -88,7 +85,6 @@ class SongTableViewController: UITableViewController {
 		
 		cell.name.text = song.name
 		cell.photoImageView.image = song.photo
-		cell.ratingControl.rating = song.rating
 		
 		return cell
 	}

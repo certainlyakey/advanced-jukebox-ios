@@ -26,7 +26,6 @@ class SongViewController: UIViewController,UITextFieldDelegate,UIImagePickerCont
 	@IBOutlet weak var UILabelSong: UILabel!
 	@IBOutlet weak var UILabelArtist: UILabel!
 	
-	@IBOutlet weak var ratingControl: RatingControl!
 	@IBOutlet weak var photoImageView: UIImageView!
 
 	@IBOutlet weak var fbLabel: UILabel!
