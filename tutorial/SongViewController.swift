@@ -10,19 +10,17 @@ import UIKit
 import Firebase
 
 class SongViewController: UIViewController,UITextFieldDelegate,UIImagePickerControllerDelegate, UINavigationControllerDelegate {
-    
-    // MARK: Properties
-    @IBOutlet weak var nameTextField: UITextField!
-    @IBOutlet weak var songNameLabel: UILabel!
-	@IBOutlet weak var addButton: UIButton!
-    
-	@IBOutlet weak var VotesNumberLabel: UILabel!
 	
-	var VotesNumber:Int = 0
-	@IBAction func VoteButton(sender: UIButton) {
-		VotesNumber = VotesNumber + 1
-		VotesNumberLabel.text = String(VotesNumber)
-	}
+	// MARK: Properties
+	//Temp UI vars
+
+
+	//UI vars
+	@IBOutlet weak var nameTextField: UITextField!
+	@IBOutlet weak var songNameLabel: UILabel!
+	@IBOutlet weak var addButton: UIButton!
+	
+	@IBOutlet weak var VotesNumberLabel: UILabel!
 
 	@IBOutlet weak var UILabelAlbum: UILabel!
 	@IBOutlet weak var UILabelSong: UILabel!
@@ -31,37 +29,48 @@ class SongViewController: UIViewController,UITextFieldDelegate,UIImagePickerCont
 	@IBOutlet weak var ratingControl: RatingControl!
 	@IBOutlet weak var photoImageView: UIImageView!
 
-    @IBOutlet weak var fbLabel: UILabel!
-    // Create a reference to a Firebase location
-    var myRootRef = Firebase(url:"https://radiant-torch-3216.firebaseio.com")
-    // Write data to Firebase
+	@IBOutlet weak var fbLabel: UILabel!
+
+
+	//Code vars
+	// Create a reference to a Firebase location
+	var databaseRef = Firebase(url:"https://radiant-torch-3216.firebaseio.com")
+	var currentId:Int = 0
+	var currentVotes:Int = 0
+	var currentIsVoted:Bool = false
+	var song: Song?
 	
 
-	var song: Song?
-    
 	override func viewDidLoad() {
 		super.viewDidLoad()
 		
 		// Handle the text field’s user input through delegate callbacks.
 		//nameTextField.delegate = self
 		
-		// Set up views if editing an existing Meal.
 		if let song = song {
-		//	navigationItem.title = song.name
+			currentId = song.id
+			currentVotes = song.votes
+			currentIsVoted = song.voted!
 			UILabelAlbum.text  = song.album
 			UILabelSong.text = song.name
 			UILabelArtist.text = song.artist
 			photoImageView.image = song.photo
 		}
 		
-		// Enable the Save button only if the text field has a valid Meal name.
-		//checkValidMealName()
 	}
-	
+
+	// fill the info for the database item
 	@IBAction func fbAction(sender: UIButton) {
-		//var songinfo = ["album":"test album","name":"test song","artist":"test artist"]
-		var songinfo = ["album":UILabelAlbum.text!,"name":UILabelSong.text!,"artist":UILabelArtist.text!]
-		var songRef = myRootRef.childByAppendingPath("song")
+		let songinfo = [
+			"id":currentId,
+			"album":UILabelAlbum.text!,
+			"name":UILabelSong.text!,
+			"artist":UILabelArtist.text!,
+			"voted":false,
+			"votes":currentVotes
+		]
+		let songRef = databaseRef.childByAppendingPath("song")
+		// Write data to Firebase
 		songRef.setValue(songinfo)
 	}
 	
@@ -75,7 +84,7 @@ class SongViewController: UIViewController,UITextFieldDelegate,UIImagePickerCont
 	}
 
 	
-    // MARK: Actions
+	// MARK: Actions
 	@IBAction func selectImageFromPhotoLibrary(sender: UITapGestureRecognizer) {
 		nameTextField.resignFirstResponder() //hide keyboard
 		let imagePickerController = UIImagePickerController()
@@ -85,22 +94,27 @@ class SongViewController: UIViewController,UITextFieldDelegate,UIImagePickerCont
 		imagePickerController.delegate = self
 		presentViewController(imagePickerController, animated: true, completion: nil)
 	}
-    
-    @IBAction func setDefaultLabelText(sender: UIButton) {
-        songNameLabel.text = "Added!"
-    }
-    // MARK: UITextFieldDelegate
-    func textFieldShouldReturn(textField: UITextField) -> Bool {
-        // Hide the keyboard
-        textField.resignFirstResponder()
-        return true
-    }
-    
-    func textFieldDidEndEditing(textField: UITextField) {
+
+	@IBAction func VoteButton(sender: UIButton) {
+		currentVotes = currentVotes + 1
+		VotesNumberLabel.text = String(currentVotes)
+	}
+	
+	@IBAction func setDefaultLabelText(sender: UIButton) {
+		songNameLabel.text = "Added!"
+	}
+	// MARK: UITextFieldDelegate
+	func textFieldShouldReturn(textField: UITextField) -> Bool {
+		// Hide the keyboard
+		textField.resignFirstResponder()
+		return true
+	}
+	
+	func textFieldDidEndEditing(textField: UITextField) {
 		let buttonText = textField.text
-        songNameLabel.text = "Found!"
+		songNameLabel.text = "Found!"
 		addButton.setTitle("Add song "+buttonText!+"?", forState: .Normal)
-    }
+	}
 
 }
 

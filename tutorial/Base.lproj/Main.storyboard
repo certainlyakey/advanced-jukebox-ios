@@ -13,11 +13,6 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                        <button key="tableFooterView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="OxB-EZ-khd">
-                            <rect key="frame" x="0.0" y="118" width="600" height="44"/>
-                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            <state key="normal" title="Button"/>
-                        </button>
                         <prototypes>
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" reuseIdentifier="SongTableViewCell" rowHeight="90" id="Ls2-vr-hbJ" customClass="SongTableViewCell" customModule="adv_jukebox" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="28" width="600" height="90"/>
@@ -71,8 +66,8 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <stackView autoresizesSubviews="NO" opaque="NO" contentMode="scaleToFill" misplaced="YES" alignment="top" spacing="12" translatesAutoresizingMaskIntoConstraints="NO" id="Wrv-O3-2XB">
-                                <rect key="frame" x="37" y="80" width="524" height="30"/>
+                            <stackView autoresizesSubviews="NO" opaque="NO" contentMode="scaleToFill" alignment="top" spacing="12" translatesAutoresizingMaskIntoConstraints="NO" id="Wrv-O3-2XB">
+                                <rect key="frame" x="37" y="80" width="543" height="30"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Search" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="129-SK-gyY">
                                         <rect key="frame" x="0.0" y="0.0" width="54" height="21"/>
@@ -80,16 +75,16 @@
                                         <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <stackView autoresizesSubviews="NO" opaque="NO" contentMode="right" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="QZz-f3-crb">
-                                        <rect key="frame" x="66" y="0.0" width="458" height="30"/>
+                                    <stackView autoresizesSubviews="NO" opaque="NO" contentMode="right" translatesAutoresizingMaskIntoConstraints="NO" id="QZz-f3-crb">
+                                        <rect key="frame" x="66" y="0.0" width="477" height="30"/>
                                         <subviews>
-                                            <textField opaque="NO" clipsSubviews="YES" contentMode="left" horizontalHuggingPriority="249" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter the song name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="oco-7J-1Cv">
-                                                <rect key="frame" x="0.0" y="0.0" width="399" height="30"/>
+                                            <textField opaque="NO" clipsSubviews="YES" contentMode="left" horizontalHuggingPriority="249" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter the song name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="oco-7J-1Cv">
+                                                <rect key="frame" x="0.0" y="0.0" width="418" height="30"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                 <textInputTraits key="textInputTraits" returnKeyType="done"/>
                                             </textField>
-                                            <button opaque="NO" contentMode="right" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Xdb-3V-yq4">
-                                                <rect key="frame" x="399" y="0.0" width="59" height="30"/>
+                                            <button opaque="NO" contentMode="right" contentHorizontalAlignment="left" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Xdb-3V-yq4">
+                                                <rect key="frame" x="418" y="0.0" width="59" height="30"/>
                                                 <inset key="contentEdgeInsets" minX="10" minY="0.0" maxX="0.0" maxY="0.0"/>
                                                 <state key="normal" title="Submit"/>
                                                 <connections>
@@ -103,14 +98,14 @@
                                     </stackView>
                                 </subviews>
                             </stackView>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QlM-sl-z1j">
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QlM-sl-z1j">
                                 <rect key="frame" x="150" y="521" width="299" height="30"/>
                                 <state key="normal" title="Send info about this song to another device"/>
                                 <connections>
                                     <action selector="fbAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="iDL-EH-HgG"/>
                                 </connections>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Album name" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="v8z-ZC-8qi">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Album name" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="v8z-ZC-8qi">
                                 <rect key="frame" x="202" y="374" width="197" height="21"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="197" id="9S8-ve-1YO"/>
@@ -119,19 +114,19 @@
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Artist name" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lgN-jF-e4Q">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Artist name" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lgN-jF-e4Q">
                                 <rect key="frame" x="202" y="410" width="197" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Song name hello" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="adV-KU-qWE">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Song name" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="adV-KU-qWE">
                                 <rect key="frame" x="202" y="335" width="197" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <imageView contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="DefImage" translatesAutoresizingMaskIntoConstraints="NO" id="m4l-bi-D7J">
+                            <imageView contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="DefImage" translatesAutoresizingMaskIntoConstraints="NO" id="m4l-bi-D7J">
                                 <rect key="frame" x="219" y="166" width="162" height="161"/>
                                 <gestureRecognizers/>
                                 <constraints>
@@ -149,11 +144,11 @@
                                     <segue destination="XnT-xT-3MD" kind="show" id="JvV-Rx-tLq"/>
                                 </connections>
                             </button>
-                            <view contentMode="scaleToFill" horizontalHuggingPriority="230" verticalHuggingPriority="236" translatesAutoresizingMaskIntoConstraints="NO" id="8Mk-Z8-3tG" customClass="RatingControl" customModule="adv_jukebox" customModuleProvider="target">
+                            <view contentMode="scaleToFill" horizontalHuggingPriority="230" verticalHuggingPriority="236" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="8Mk-Z8-3tG" customClass="RatingControl" customModule="adv_jukebox" customModuleProvider="target">
                                 <rect key="frame" x="179" y="473" width="241" height="41"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                             </view>
-                            <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="KDh-3h-CgD">
+                            <stackView opaque="NO" contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="KDh-3h-CgD">
                                 <rect key="frame" x="229" y="439" width="140" height="21"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1PC-De-t5d">

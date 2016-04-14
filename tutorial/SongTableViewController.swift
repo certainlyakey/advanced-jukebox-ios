@@ -23,13 +23,40 @@ class SongTableViewController: UITableViewController {
 		
 		let photo1 = UIImage(named: "dd1")!
 		
-		let song1 = Song(name: "I have been loved by you", photo: photo1, rating: 4, album: "My second album", artist: "M. Jackson")!
+		let song1 = Song(
+			id: 1,
+			name: "I have been loved by you",
+			photo: photo1,
+			rating: 4,
+			votes:0,
+			album: "My second album",
+			artist: "M. Jackson",
+			voted: false
+			)!
 		
 		let photo2 = UIImage(named: "dd2")!
-		let song2 = Song(name: "We are the champions", photo: photo2, rating: 5, album: "Bohemian Rhapsody", artist: "Queen")!
+		let song2 = Song(
+			id: 2,
+			name: "We are the champions",
+			photo: photo2,
+			rating: 5,
+			votes:0,
+			album: "Bohemian Rhapsody",
+			artist: "Queen",
+			voted:false
+			)!
 		
 		let photo3 = UIImage(named: "dd3")!
-		let song3 = Song(name: "Singing Pugs Make It Again", photo: photo3, rating: 3, album: "Album", artist: "David Bowie")!
+		let song3 = Song(
+			id: 3,
+			name: "Singing Pugs Make It Again",
+			photo: photo3,
+			rating: 3,
+			votes:0,
+			album: "Album",
+			artist: "David Bowie",
+			voted:false
+			)!
 		
 		songs += [song1, song2, song3]
 	}
