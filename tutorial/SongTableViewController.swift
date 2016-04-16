@@ -21,41 +21,47 @@ class SongTableViewController: UITableViewController {
 
 	func loadSampleSongs() {
 		
-		let photo1 = UIImage(named: "dd1")!
-		
 		let song1 = Song(
 			id: 1,
 			name: "I have been loved by you",
-			photo: photo1,
+			imgurl: "http://www.stihi.ru/pics/2009/06/08/896.jpg",
 			votes:0,
 			album: "My second album",
 			artist: "M. Jackson",
 			voted: false
 			)!
 		
-		let photo2 = UIImage(named: "dd2")!
 		let song2 = Song(
 			id: 2,
 			name: "We are the champions",
-			photo: photo2,
+			imgurl: "https://katrinajuniodesign.files.wordpress.com/2015/11/img_35701.jpg",
 			votes:0,
 			album: "Bohemian Rhapsody",
 			artist: "Queen",
 			voted:false
 			)!
 		
-		let photo3 = UIImage(named: "dd3")!
 		let song3 = Song(
 			id: 3,
 			name: "Singing Pugs Make It Again",
-			photo: photo3,
+			imgurl: "https://lh3.googleusercontent.com/-xVUsLxyTCC8/VhivX3sqAyI/AAAAAAAAJ3E/h53-Pc4Fz_s/s319-p/4.jpg",
 			votes:0,
 			album: "Album",
 			artist: "David Bowie",
 			voted:false
 			)!
 		
-		songs += [song1, song2, song3]
+		let song4 = Song(
+			id: 4,
+			name: "Song of one person",
+			imgurl: "https://pbs.twimg.com/profile_images/517367114475114496/1UH4GjQ1_400x400.jpeg",
+			votes:3,
+			album: "Here comes the sun",
+			artist: "Leningrad",
+			voted:false
+			)!
+		
+		songs += [song1, song2, song3, song4]
 	}
 
     override func didReceiveMemoryWarning() {
@@ -83,8 +89,28 @@ class SongTableViewController: UITableViewController {
 		
 		let song = songs[indexPath.row]
 		
+		let url = NSURL(string: song.imgurl!)
+		
+		
+		let task = NSURLSession.sharedSession().dataTaskWithURL(url!) { (data, response, error) -> Void in
+			
+			if error != nil {
+				print("thers an error in the log")
+			} else {
+				
+				dispatch_async(dispatch_get_main_queue()) {
+					let image = UIImage(data: data!)
+					cell.photoImageView.image = image
+					
+				}
+			}
+			
+		}
+		
+		task.resume()
+		
 		cell.name.text = song.name
-		cell.photoImageView.image = song.photo
+		
 		
 		return cell
 	}

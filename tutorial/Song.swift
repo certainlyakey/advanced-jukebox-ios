@@ -13,7 +13,7 @@ class Song {
 	
 	var id: Int
 	var name: String
-	var photo: UIImage?
+	var imgurl: String?
 	var votes: Int
 	var album: String?
 	var artist: String?
@@ -24,7 +24,7 @@ class Song {
 	init?(
 		id: Int,
 		name: String,
-		photo: UIImage?,
+		imgurl: String?,
 		votes: Int,
 		album: String?,
 		artist: String?,
@@ -32,7 +32,7 @@ class Song {
 		) {
 		self.id = id
 		self.name = name
-		self.photo = photo
+		self.imgurl = imgurl
 		self.votes = votes
 		self.album = album
 		self.artist = artist

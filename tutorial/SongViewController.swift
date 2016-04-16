@@ -9,6 +9,7 @@
 import UIKit
 import Firebase
 
+
 class SongViewController: UIViewController,UITextFieldDelegate,UIImagePickerControllerDelegate, UINavigationControllerDelegate {
 	
 	// MARK: Properties
@@ -37,6 +38,7 @@ class SongViewController: UIViewController,UITextFieldDelegate,UIImagePickerCont
 	var currentId:Int = 0
 	var currentVotes:Int = 0
 	var currentIsVoted:Bool = false
+	var currentImgURL:String = ""
 	var song: Song?
 	
 
@@ -46,15 +48,39 @@ class SongViewController: UIViewController,UITextFieldDelegate,UIImagePickerCont
 		// Handle the text field’s user input through delegate callbacks.
 		//nameTextField.delegate = self
 		
+		
+		
 		if let song = song {
+			currentImgURL = song.imgurl!
 			currentId = song.id
 			currentVotes = song.votes
 			currentIsVoted = song.voted!
 			UILabelAlbum.text  = song.album
 			UILabelSong.text = song.name
 			UILabelArtist.text = song.artist
-			photoImageView.image = song.photo
 		}
+		
+		let url = NSURL(string: currentImgURL)
+		
+		
+		let task = NSURLSession.sharedSession().dataTaskWithURL(url!) { (data, response, error) -> Void in
+			
+			if error != nil {
+				print("thers an error in the log")
+			} else {
+				
+				dispatch_async(dispatch_get_main_queue()) {
+					let image = UIImage(data: data!)
+					self.photoImageView.image = image
+					
+				}
+			}
+			
+		}
+		
+		task.resume()
+
+		
 		
 	}
 
@@ -66,7 +92,8 @@ class SongViewController: UIViewController,UITextFieldDelegate,UIImagePickerCont
 			"name":UILabelSong.text!,
 			"artist":UILabelArtist.text!,
 			"voted":false,
-			"votes":currentVotes
+			"votes":currentVotes,
+			"imgurl":currentImgURL
 		]
 		let songRef = databaseRef.childByAppendingPath("song")
 		// Write data to Firebase
