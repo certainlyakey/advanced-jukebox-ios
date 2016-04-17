@@ -11,10 +11,10 @@ import UIKit
 class Song {
 	// MARK: Properties
 	
-	var id: Int
-	var name: String
+	var id: Int?
+	var name: String?
 	var imgurl: String?
-	var votes: Int
+	var votes: Int?
 	var album: String?
 	var artist: String?
 	var voted: Bool?
@@ -22,10 +22,10 @@ class Song {
 	// MARK: Initialization
  
 	init?(
-		id: Int,
-		name: String,
+		id: Int?,
+		name: String?,
 		imgurl: String?,
-		votes: Int,
+		votes: Int?,
 		album: String?,
 		artist: String?,
 		voted: Bool?
@@ -38,7 +38,7 @@ class Song {
 		self.artist = artist
 		self.voted = voted
 		
-		if name.isEmpty || id < 1 {
+		if name!.isEmpty || id < 1 {
 			return nil
 		}
 	}

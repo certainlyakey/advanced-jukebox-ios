@@ -7,10 +7,12 @@
 //
 
 import UIKit
+import Firebase
 
 class SongTableViewController: UITableViewController {
 	
 	var songs = [Song]()
+	var databaseRef = Firebase(url:"https://radiant-torch-3216.firebaseio.com")
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -20,48 +22,25 @@ class SongTableViewController: UITableViewController {
 
 
 	func loadSampleSongs() {
-		
-		let song1 = Song(
-			id: 1,
-			name: "I have been loved by you",
-			imgurl: "http://www.stihi.ru/pics/2009/06/08/896.jpg",
-			votes:0,
-			album: "My second album",
-			artist: "M. Jackson",
-			voted: false
-			)!
-		
-		let song2 = Song(
-			id: 2,
-			name: "We are the champions",
-			imgurl: "https://katrinajuniodesign.files.wordpress.com/2015/11/img_35701.jpg",
-			votes:0,
-			album: "Bohemian Rhapsody",
-			artist: "Queen",
-			voted:false
-			)!
-		
-		let song3 = Song(
-			id: 3,
-			name: "Singing Pugs Make It Again",
-			imgurl: "https://lh3.googleusercontent.com/-xVUsLxyTCC8/VhivX3sqAyI/AAAAAAAAJ3E/h53-Pc4Fz_s/s319-p/4.jpg",
-			votes:0,
-			album: "Album",
-			artist: "David Bowie",
-			voted:false
-			)!
-		
-		let song4 = Song(
-			id: 4,
-			name: "Song of one person",
-			imgurl: "https://pbs.twimg.com/profile_images/517367114475114496/1UH4GjQ1_400x400.jpeg",
-			votes:3,
-			album: "Here comes the sun",
-			artist: "Leningrad",
-			voted:false
-			)!
-		
-		songs += [song1, song2, song3, song4]
+		let songsRef = databaseRef.childByAppendingPath("songs")
+		songsRef.observeEventType(.Value, withBlock: { snapshot in
+			self.songs = []
+		    for song_item in snapshot.value as! [AnyObject] {
+		    	let song = Song(
+					id: song_item["id"] as? Int,
+		    		name: song_item["name"] as? String,
+		    		imgurl: song_item["imgurl"] as? String,
+		    		votes:song_item["votes"] as? Int,
+		    		album: song_item["album"] as? String,
+		    		artist: song_item["artist"] as? String,
+		    		voted: song_item["voted"] as? Bool
+	    		)!
+	    		self.songs += [song]
+		    }
+			self.tableView.reloadData()
+		}, withCancelBlock: { error in
+		    print(error.description)
+		})
 	}
 
     override func didReceiveMemoryWarning() {
@@ -95,7 +74,7 @@ class SongTableViewController: UITableViewController {
 		let task = NSURLSession.sharedSession().dataTaskWithURL(url!) { (data, response, error) -> Void in
 			
 			if error != nil {
-				print("thers an error in the log")
+				print("there's an error in the log")
 			} else {
 				
 				dispatch_async(dispatch_get_main_queue()) {

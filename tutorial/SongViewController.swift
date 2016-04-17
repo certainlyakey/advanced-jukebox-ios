@@ -52,8 +52,8 @@ class SongViewController: UIViewController,UITextFieldDelegate,UIImagePickerCont
 		
 		if let song = song {
 			currentImgURL = song.imgurl!
-			currentId = song.id
-			currentVotes = song.votes
+			currentId = song.id!
+			currentVotes = song.votes!
 			currentIsVoted = song.voted!
 			UILabelAlbum.text  = song.album
 			UILabelSong.text = song.name
