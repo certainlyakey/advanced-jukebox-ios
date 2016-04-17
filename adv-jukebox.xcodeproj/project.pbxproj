@@ -13,7 +13,7 @@
 		836950B81C9A1DFA0090B4AF /* SongTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 836950B71C9A1DFA0090B4AF /* SongTableViewController.swift */; };
 		83CE44361C87659D00B7FA5E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83CE44351C87659D00B7FA5E /* AppDelegate.swift */; };
 		83CE44381C87659D00B7FA5E /* SongViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83CE44371C87659D00B7FA5E /* SongViewController.swift */; };
-		83CE443B1C87659D00B7FA5E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 83CE44391C87659D00B7FA5E /* Main.storyboard */; };
+		83CE443B1C87659D00B7FA5E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 83CE44391C87659D00B7FA5E /* Main.storyboard */; settings = {ASSET_TAGS = ("Splash Screen", e, ); }; };
 		83CE443D1C87659D00B7FA5E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 83CE443C1C87659D00B7FA5E /* Assets.xcassets */; };
 		83CE44401C87659D00B7FA5E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 83CE443E1C87659D00B7FA5E /* LaunchScreen.storyboard */; };
 /* End PBXBuildFile section */
@@ -129,6 +129,10 @@
 		83CE442A1C87659D00B7FA5E /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
+				KnownAssetTags = (
+					"Splash Screen",
+					e,
+				);
 				LastSwiftUpdateCheck = 0730;
 				LastUpgradeCheck = 0720;
 				ORGANIZATIONNAME = AleksandrBeliaev;

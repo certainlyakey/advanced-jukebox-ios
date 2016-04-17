@@ -49,6 +49,40 @@
             </objects>
             <point key="canvasLocation" x="-1089" y="366"/>
         </scene>
+        <!--View Controller-->
+        <scene sceneID="HkY-96-JRU">
+            <objects>
+                <viewController id="xOe-4y-z5o" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="hrU-aY-fSx"/>
+                        <viewControllerLayoutGuide type="bottom" id="u5u-OT-D6E"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="dbc-Hi-5ca">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" tag="-1" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Splash_Backgorund" translatesAutoresizingMaskIntoConstraints="NO" id="MNb-aX-qy0">
+                                <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" tag="4" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Logo" translatesAutoresizingMaskIntoConstraints="NO" id="Cr8-Nb-iOO">
+                                <rect key="frame" x="180" y="161" width="240" height="128"/>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="LdX-GO-nns" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1105" y="1133"/>
+        </scene>
+        <!--Page View Controller-->
+        <scene sceneID="CEa-XY-Orp">
+            <objects>
+                <pageViewController autoresizesArchivedViewToFullSize="NO" transitionStyle="pageCurl" navigationOrientation="horizontal" spineLocation="min" id="iPS-05-EAt" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="BZh-8S-QTl" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-405" y="1133"/>
+        </scene>
         <!--Song View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
@@ -217,6 +251,8 @@
         </scene>
     </scenes>
     <resources>
+        <image name="Logo" width="950" height="541"/>
         <image name="PinkFloyd_Otherside" width="633" height="633"/>
+        <image name="Splash_Backgorund" width="1500" height="2666"/>
     </resources>
 </document>
