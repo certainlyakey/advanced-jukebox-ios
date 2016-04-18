@@ -75,14 +75,6 @@
             </objects>
             <point key="canvasLocation" x="-1105" y="1133"/>
         </scene>
-        <!--Page View Controller-->
-        <scene sceneID="CEa-XY-Orp">
-            <objects>
-                <pageViewController autoresizesArchivedViewToFullSize="NO" transitionStyle="pageCurl" navigationOrientation="horizontal" spineLocation="min" id="iPS-05-EAt" sceneMemberID="viewController"/>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="BZh-8S-QTl" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="-405" y="1133"/>
-        </scene>
         <!--Song View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
