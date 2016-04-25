@@ -11,11 +11,11 @@ h1 {
 }
 
 body {
-    background-image: url("img/598px-Juke_Box_Museum.jpg");
+    background-image: url("Juke_Box_Museum%20copy.jpg");
     }
 
 #Container {
-    width:800px;
+	width:800px;
     height: auto;
     margin-left: auto;
     margin-right: auto;
@@ -118,4 +118,33 @@ position: relative;
 }
 #adds {
     float: right;
+}
+.box {
+	/* basics */
+	background-color:#55c0d6;
+	color:currentColor;
+    text-align: center;
+    height: 60px;
+
+	/* rounded corners */
+    -webkit-border-radius: 4px;
+    border-radius: 4px; 
+    -moz-background-clip: padding; -webkit-background-clip: padding-box; background-clip: padding-box;
+    width: 3em;
+	margin: 15px;	
+  
+  float: right;
+}
+label {
+	display: block;
+	font-size: .8em;
+}
+input {
+	font-size: 2.4em;
+	background-color: transparent;
+	text-align: center;
+	border-width: 0;
+	width: 100%;
+	margin: 0 0 .1em 0;
+	color: #fff;
 }
