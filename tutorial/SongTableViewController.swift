@@ -9,7 +9,7 @@
 import UIKit
 import Firebase
 
-class SongTableViewController: UITableViewController, UISearchResultsUpdating {
+class SongTableViewController: UITableViewController{
 	
 //    @IBOutlet weak var SearchBar: UISearchBar!
 	var songs = [Song]()
@@ -23,8 +23,13 @@ class SongTableViewController: UITableViewController, UISearchResultsUpdating {
 		
 		
 		searchController.searchResultsUpdater = self
+        searchController.searchBar.delegate = self
 		searchController.dimsBackgroundDuringPresentation = false
 		definesPresentationContext = true
+	//	tableView.tableHeaderView = searchController.searchBar
+		
+		// Setup the Scope Bar
+		searchController.searchBar.scopeButtonTitles = ["All", "Song", "Artist", "Album"]
 		tableView.tableHeaderView = searchController.searchBar
 		
 		loadSampleSongs()
@@ -145,19 +150,47 @@ class SongTableViewController: UITableViewController, UISearchResultsUpdating {
 //		}
 	}
 	
-
-	func updateSearchResultsForSearchController(searchController: UISearchController) {
-		filterContentForSearchText(searchController.searchBar.text!)
-	}
-	
 	func filterContentForSearchText(searchText: String, scope: String = "All") {
 		filteredSongs = songs.filter { song in
-			return song.name!.lowercaseString.containsString(searchText.lowercaseString) || song.artist!.lowercaseString.containsString(searchText.lowercaseString) || song.album!.lowercaseString.containsString(searchText.lowercaseString)
+			switch scope {
+				case "All" : return song.name!.lowercaseString.containsString(searchText.lowercaseString) || song.artist!.lowercaseString.containsString(searchText.lowercaseString) || song.album!.lowercaseString.containsString(searchText.lowercaseString)
+				case "Song" : return song.name!.lowercaseString.containsString(searchText.lowercaseString)
+				case "Artist" : return song.artist!.lowercaseString.containsString(searchText.lowercaseString)
+				case "Album" : return song.album!.lowercaseString.containsString(searchText.lowercaseString)
+				default : return false
+			}
 		}
 		
 		tableView.reloadData()
 	}
 	
+	/*func filterContentForSearchText(searchText: String, scope: String = "All") {
+		filteredSongs = songs.filter ({( song : Song) -> Bool in
+			let categoryMatch = (scope == "All") || (candy.category == scope)
+			return categoryMatch && candy.name.lowercaseString.containsString(searchText.lowercaseString)
+		})
+		tableView.reloadData()
+	}*/
 	
 
+
+
+}
+
+
+extension SongTableViewController: UISearchBarDelegate {
+    // MARK: - UISearchBar Delegate
+    func searchBar(searchBar: UISearchBar, selectedScopeButtonIndexDidChange selectedScope: Int) {
+        filterContentForSearchText(searchBar.text!, scope: searchBar.scopeButtonTitles![selectedScope])
+    }
+}
+
+
+extension SongTableViewController: UISearchResultsUpdating {
+    // MARK: - UISearchResultsUpdating Delegate
+    func updateSearchResultsForSearchController(searchController: UISearchController) {
+        let searchBar = searchController.searchBar
+        let scope = searchBar.scopeButtonTitles![searchBar.selectedScopeButtonIndex]
+        filterContentForSearchText(searchController.searchBar.text!, scope: scope)
+    }
 }
