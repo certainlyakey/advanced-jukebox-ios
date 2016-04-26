@@ -130,7 +130,13 @@ class SongTableViewController: UITableViewController, UISearchResultsUpdating {
 			// Get the cell that generated this segue.
 			if let selectedSongCell = sender as? SongTableViewCell {
 				let indexPath = tableView.indexPathForCell(selectedSongCell)!
-				let selectedSong = songs[indexPath.row]
+				//let selectedSong = songs[indexPath.row]
+				let selectedSong: Song
+				if searchController.active && searchController.searchBar.text != "" {
+					selectedSong = filteredSongs[indexPath.row]
+				} else {
+					selectedSong = songs[indexPath.row]
+				}
 				songDetailViewController.song = selectedSong
 			}
 //		}
@@ -146,7 +152,7 @@ class SongTableViewController: UITableViewController, UISearchResultsUpdating {
 	
 	func filterContentForSearchText(searchText: String, scope: String = "All") {
 		filteredSongs = songs.filter { song in
-			return song.name!.lowercaseString.containsString(searchText.lowercaseString)
+			return song.name!.lowercaseString.containsString(searchText.lowercaseString) || song.artist!.lowercaseString.containsString(searchText.lowercaseString) || song.album!.lowercaseString.containsString(searchText.lowercaseString)
 		}
 		
 		tableView.reloadData()
