@@ -9,15 +9,29 @@
 import UIKit
 import Firebase
 
-class SongTableViewController: UITableViewController {
+class SongTableViewController: UITableViewController, UISearchResultsUpdating {
 	
+//    @IBOutlet weak var SearchBar: UISearchBar!
 	var songs = [Song]()
+	var filteredSongs = [Song]()
 	var databaseRef = Firebase(url:"https://radiant-torch-3216.firebaseio.com")
 
+	let searchController = UISearchController(searchResultsController: nil)
+	
     override func viewDidLoad() {
         super.viewDidLoad()
+		
+		
+		searchController.searchResultsUpdater = self
+		searchController.dimsBackgroundDuringPresentation = false
+		definesPresentationContext = true
+		tableView.tableHeaderView = searchController.searchBar
+		
 		loadSampleSongs()
     }
+	
+	
+	
 	
 
 
@@ -55,18 +69,30 @@ class SongTableViewController: UITableViewController {
 		return 1
     }
 
-    override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-		
-        return songs.count
-    }
-
+	
+	
+	override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+		if searchController.active && searchController.searchBar.text != "" {
+			return filteredSongs.count
+		}
+		return songs.count
+	}
+	
+	
 	
 	override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
 		// Table view cells are reused and should be dequeued using a cell identifier.
 		let cellIdentifier = "SongTableViewCell"
 		let cell = tableView.dequeueReusableCellWithIdentifier(cellIdentifier, forIndexPath: indexPath) as! SongTableViewCell
 		
-		let song = songs[indexPath.row]
+		let song : Song
+			
+		if searchController.active && searchController.searchBar.text != "" {
+			song = filteredSongs[indexPath.row]
+		} else {
+			song = songs[indexPath.row]
+		}
+		
 		
 		let url = NSURL(string: song.imgurl!)
 		
@@ -94,6 +120,9 @@ class SongTableViewController: UITableViewController {
 		return cell
 	}
 	
+
+	
+	
 	override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
 //		if segue.identifier == "ShowDetail" {
 			let songDetailViewController = segue.destinationViewController as! SongViewController
@@ -109,6 +138,20 @@ class SongTableViewController: UITableViewController {
 //			print("Adding new meal.")
 //		}
 	}
+	
+
+	func updateSearchResultsForSearchController(searchController: UISearchController) {
+		filterContentForSearchText(searchController.searchBar.text!)
+	}
+	
+	func filterContentForSearchText(searchText: String, scope: String = "All") {
+		filteredSongs = songs.filter { song in
+			return song.name!.lowercaseString.containsString(searchText.lowercaseString)
+		}
+		
+		tableView.reloadData()
+	}
+	
 	
 
 }
