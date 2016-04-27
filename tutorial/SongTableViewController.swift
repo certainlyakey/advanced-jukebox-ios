@@ -120,6 +120,8 @@ class SongTableViewController: UITableViewController{
 		task.resume()
 		
 		cell.name.text = song.name
+		cell.artistName.text = song.album
+		cell.albumName.text = song.artist
 		
 		
 		return cell
