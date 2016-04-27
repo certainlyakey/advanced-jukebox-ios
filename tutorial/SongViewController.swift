@@ -17,9 +17,7 @@ class SongViewController: UIViewController,UITextFieldDelegate,UIImagePickerCont
 
 
 	//UI vars
-	@IBOutlet weak var nameTextField: UITextField!
 	@IBOutlet weak var songNameLabel: UILabel!
-	@IBOutlet weak var addButton: UIButton!
 	
 	@IBOutlet weak var VotesNumberLabel: UILabel!
 
@@ -28,8 +26,6 @@ class SongViewController: UIViewController,UITextFieldDelegate,UIImagePickerCont
 	@IBOutlet weak var UILabelArtist: UILabel!
 	
 	@IBOutlet weak var photoImageView: UIImageView!
-
-	@IBOutlet weak var fbLabel: UILabel!
 
 
 	//Code vars
@@ -44,11 +40,6 @@ class SongViewController: UIViewController,UITextFieldDelegate,UIImagePickerCont
 
 	override func viewDidLoad() {
 		super.viewDidLoad()
-		
-		// Handle the text field’s user input through delegate callbacks.
-		//nameTextField.delegate = self
-		
-		
 		
 		if let song = song {
 			currentImgURL = song.imgurl!
@@ -112,7 +103,7 @@ class SongViewController: UIViewController,UITextFieldDelegate,UIImagePickerCont
 	
 	// MARK: Actions
 	@IBAction func selectImageFromPhotoLibrary(sender: UITapGestureRecognizer) {
-		nameTextField.resignFirstResponder() //hide keyboard
+		// nameTextField.resignFirstResponder() //hide keyboard
 		let imagePickerController = UIImagePickerController()
 		imagePickerController.sourceType = .PhotoLibrary
 		
@@ -136,11 +127,5 @@ class SongViewController: UIViewController,UITextFieldDelegate,UIImagePickerCont
 		return true
 	}
 	
-	func textFieldDidEndEditing(textField: UITextField) {
-		let buttonText = textField.text
-		songNameLabel.text = "Found!"
-		addButton.setTitle("Add song "+buttonText!+"?", forState: .Normal)
-	}
-
 }
 
