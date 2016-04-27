@@ -80,7 +80,7 @@ class SongViewController: UIViewController,UITextFieldDelegate,UIImagePickerCont
 		
 		task.resume()
 
-		
+		VotesNumberLabel.text = String(currentVotes)
 		
 	}
 
