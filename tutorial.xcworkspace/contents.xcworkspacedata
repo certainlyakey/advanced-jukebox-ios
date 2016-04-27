@@ -2,6 +2,9 @@
 <Workspace
    version = "1.0">
    <FileRef
+      location = "group:PlaylistTableViewContloller.swift">
+   </FileRef>
+   <FileRef
       location = "group:adv-jukebox.xcodeproj">
    </FileRef>
    <FileRef

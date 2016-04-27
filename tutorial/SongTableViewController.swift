@@ -165,14 +165,7 @@ class SongTableViewController: UITableViewController{
 		
 		tableView.reloadData()
 	}
-	
-	/*func filterContentForSearchText(searchText: String, scope: String = "All") {
-		filteredSongs = songs.filter ({( song : Song) -> Bool in
-			let categoryMatch = (scope == "All") || (candy.category == scope)
-			return categoryMatch && candy.name.lowercaseString.containsString(searchText.lowercaseString)
-		})
-		tableView.reloadData()
-	}*/
+
 	
 
 
