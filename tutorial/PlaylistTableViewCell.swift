@@ -9,9 +9,8 @@
 import UIKit
 
 class PlaylistTableViewCell: UITableViewCell {
-// MARK: Properties
+	// MARK: Properties
     @IBOutlet weak var playlistName: UILabel!
-	
 	@IBOutlet weak var playlistType: UILabel!
 	
 	override func awakeFromNib() {
