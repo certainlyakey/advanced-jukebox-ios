@@ -94,6 +94,7 @@ class SongViewController: UIViewController,UITextFieldDelegate,UIImagePickerCont
 	func imagePickerControllerDidCancel(picker: UIImagePickerController) {
 		dismissViewControllerAnimated(true, completion: nil)
 	}
+	
 	func imagePickerController(picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [String : AnyObject]) {
 		let selectedImage = info[UIImagePickerControllerOriginalImage] as! UIImage
 		photoImageView.image = selectedImage

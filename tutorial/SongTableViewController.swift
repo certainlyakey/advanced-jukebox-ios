@@ -32,6 +32,7 @@ class SongTableViewController: UITableViewController{
 		searchController.searchBar.scopeButtonTitles = ["All", "Song", "Artist", "Album"]
 		tableView.tableHeaderView = searchController.searchBar
 		
+		
 		loadSampleSongs()
     }
 	
