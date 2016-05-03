@@ -38,7 +38,7 @@ class Song {
 		self.artist = artist
 		self.voted = voted
 		
-		if name!.isEmpty || id < 1 {
+		if name!.isEmpty || id < 0 {
 			return nil
 		}
 	}

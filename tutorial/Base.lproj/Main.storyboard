@@ -30,7 +30,7 @@
                                             <nil key="highlightedColor"/>
                                         </label>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Album Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8cK-Td-3wo">
-                                            <rect key="frame" x="110" y="60" width="472" height="21"/>
+                                            <rect key="frame" x="110" y="60" width="400" height="21"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="15"/>
                                             <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                             <nil key="highlightedColor"/>
@@ -41,6 +41,12 @@
                                             <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                             <nil key="highlightedColor"/>
                                         </label>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="votes" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zdS-V1-eW4">
+                                            <rect key="frame" x="255" y="43" width="149" height="21"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
                                     </subviews>
                                 </tableViewCellContentView>
                                 <connections>
@@ -48,6 +54,7 @@
                                     <outlet property="artistName" destination="QmO-0c-Tfo" id="52c-CI-W9f"/>
                                     <outlet property="name" destination="HPz-vh-KDs" id="PfH-EW-NFt"/>
                                     <outlet property="photoImageView" destination="o6X-sT-NYa" id="wu2-3m-kwv"/>
+                                    <outlet property="votes" destination="zdS-V1-eW4" id="ZR5-gL-Hz8"/>
                                     <segue destination="BYZ-38-t0r" kind="show" identifier="ShowDetail" id="rRq-1B-Ipc"/>
                                 </connections>
                             </tableViewCell>
@@ -151,7 +158,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QlM-sl-z1j">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QlM-sl-z1j">
                                 <rect key="frame" x="150" y="521" width="299" height="30"/>
                                 <state key="normal" title="Send info about this song to another device"/>
                                 <connections>
@@ -426,19 +433,6 @@
                 </tableView>
             </objects>
             <point key="canvasLocation" x="-223" y="1179"/>
-        </scene>
-        <!--View Controller-->
-        <scene sceneID="OS2-qe-Yqq">
-            <objects>
-                <viewController id="gC3-ON-fr0" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="b1u-ZQ-hXD">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                    </view>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="mqv-UP-suL" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
         </scene>
     </scenes>
     <resources>

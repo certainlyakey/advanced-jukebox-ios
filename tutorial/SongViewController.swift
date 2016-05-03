@@ -36,6 +36,8 @@ class SongViewController: UIViewController,UITextFieldDelegate,UIImagePickerCont
 	var currentIsVoted:Bool = false
 	var currentImgURL:String = ""
 	var song: Song?
+	var songs = [Song]()
+	
 	
 
 	override func viewDidLoad() {
@@ -73,6 +75,27 @@ class SongViewController: UIViewController,UITextFieldDelegate,UIImagePickerCont
 
 		VotesNumberLabel.text = String(currentVotes)
 		
+		let songsRef = databaseRef.childByAppendingPath("songs")
+		songsRef.observeEventType(.Value, withBlock: { snapshot in
+			self.songs = []
+			for song_item in snapshot.value as! [AnyObject] {
+				let song = Song(
+					id: song_item["id"] as? Int,
+					name: song_item["name"] as? String,
+					imgurl: song_item["imgurl"] as? String,
+					votes:song_item["votes"] as? Int,
+					album: song_item["album"] as? String,
+					artist: song_item["artist"] as? String,
+					voted: song_item["voted"] as? Bool
+					)!
+				self.songs += [song]
+			}
+			//self.tableView.reloadData()
+			}, withCancelBlock: { error in
+				print(error.description)
+		})
+		
+		
 	}
 
 	// fill the info for the database item
@@ -89,6 +112,12 @@ class SongViewController: UIViewController,UITextFieldDelegate,UIImagePickerCont
 		let songRef = databaseRef.childByAppendingPath("song")
 		// Write data to Firebase
 		songRef.setValue(songinfo)
+		
+		let songsRef = databaseRef.childByAppendingPath("songs")
+		let actSongRef = songsRef.childByAppendingPath(String(currentId))
+		let actVotes = ["votes": currentVotes]
+		
+		actSongRef.updateChildValues(actVotes)
 	}
 	
 	func imagePickerControllerDidCancel(picker: UIImagePickerController) {
@@ -116,9 +145,15 @@ class SongViewController: UIViewController,UITextFieldDelegate,UIImagePickerCont
 	@IBAction func VoteButton(sender: UIButton) {
 		currentVotes = currentVotes + 1
 		VotesNumberLabel.text = String(currentVotes)
+		
+		let songsRef = databaseRef.childByAppendingPath("songs")
+		let actSongRef = songsRef.childByAppendingPath(String(currentId))
+		let actVotes = ["votes": currentVotes]
+		
+		actSongRef.updateChildValues(actVotes)
 	}
 	
-	@IBAction func setDefaultLabelText(sender: UIButton) {
+/*	@IBAction func setDefaultLabelText(sender: UIButton) {
 		songNameLabel.text = "Added!"
 	}
 	// MARK: UITextFieldDelegate
@@ -126,7 +161,7 @@ class SongViewController: UIViewController,UITextFieldDelegate,UIImagePickerCont
 		// Hide the keyboard
 		textField.resignFirstResponder()
 		return true
-	}
+	}*/
 	
 }
 

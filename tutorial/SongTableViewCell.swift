@@ -11,6 +11,8 @@ import UIKit
 class SongTableViewCell: UITableViewCell {
 	// MARK: Properties
 
+  //  @IBOutlet weak var votes: UILabel!
+    @IBOutlet weak var votes: UILabel!
 	@IBOutlet weak var albumName: UILabel!
 	@IBOutlet weak var artistName: UILabel!
 	@IBOutlet weak var name: UILabel!

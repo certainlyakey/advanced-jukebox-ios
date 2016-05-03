@@ -21,12 +21,15 @@ class SongTableViewController: UITableViewController{
     override func viewDidLoad() {
         super.viewDidLoad()
 		
+		//self.refreshControl?.addTarget(self, action: "handleRefresh:", forControlEvents: UIControlEvents.ValueChanged)
+		self.refreshControl?.addTarget(self, action: #selector(SongTableViewController.refresh(_:)), forControlEvents: UIControlEvents.ValueChanged)
+
 		
 		searchController.searchResultsUpdater = self
         searchController.searchBar.delegate = self
 		searchController.dimsBackgroundDuringPresentation = false
 		definesPresentationContext = true
-	//	tableView.tableHeaderView = searchController.searchBar
+		tableView.tableHeaderView = searchController.searchBar
 		
 		// Setup the Scope Bar
 		searchController.searchBar.scopeButtonTitles = ["All", "Song", "Artist", "Album"]
@@ -34,6 +37,10 @@ class SongTableViewController: UITableViewController{
 		
 		
 		loadSampleSongs()
+		
+		
+	//	songs.sortInPlace ({$0.votes < $1.votes})
+
     }
 	
 	
@@ -61,6 +68,7 @@ class SongTableViewController: UITableViewController{
 		}, withCancelBlock: { error in
 		    print(error.description)
 		})
+		
 	}
 
     override func didReceiveMemoryWarning() {
@@ -88,6 +96,8 @@ class SongTableViewController: UITableViewController{
 	
 	override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
 		// Table view cells are reused and should be dequeued using a cell identifier.
+		songs.sortInPlace ({$0.votes > $1.votes})
+		
 		let cellIdentifier = "SongTableViewCell"
 		let cell = tableView.dequeueReusableCellWithIdentifier(cellIdentifier, forIndexPath: indexPath) as! SongTableViewCell
 		
@@ -123,6 +133,7 @@ class SongTableViewController: UITableViewController{
 		cell.name.text = song.name
 		cell.artistName.text = song.album
 		cell.albumName.text = song.artist
+		cell.votes.text = String(song.votes!) + " votes"
 		
 		
 		return cell
@@ -168,6 +179,12 @@ class SongTableViewController: UITableViewController{
 	}
 
 	
+	func refresh(refreshControl: UIRefreshControl) {
+		loadSampleSongs()
+		
+		self.tableView.reloadData()
+		refreshControl.endRefreshing()
+	}
 
 
 
