@@ -51,117 +51,6 @@
                                     <segue destination="BYZ-38-t0r" kind="show" identifier="ShowDetail" id="rRq-1B-Ipc"/>
                                 </connections>
                             </tableViewCell>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" reuseIdentifier="SongTableViewCell" rowHeight="90" id="ojA-IP-Ja5" customClass="SongTableViewCell" customModule="adv_jukebox" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="182" width="600" height="90"/>
-                                <autoresizingMask key="autoresizingMask"/>
-                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" tag="1" contentMode="center" tableViewCell="ojA-IP-Ja5" id="fDM-xM-KNa">
-                                    <rect key="frame" x="0.0" y="0.0" width="600" height="89.5"/>
-                                    <autoresizingMask key="autoresizingMask"/>
-                                    <subviews>
-                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Bent_Intercept" translatesAutoresizingMaskIntoConstraints="NO" id="ghq-Dp-Jpg">
-                                            <rect key="frame" x="0.0" y="0.0" width="94" height="90"/>
-                                        </imageView>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Bent" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ePv-P7-LAc">
-                                            <rect key="frame" x="110" y="32" width="472" height="26"/>
-                                            <fontDescription key="fontDescription" type="system" pointSize="15"/>
-                                            <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                            <nil key="highlightedColor"/>
-                                        </label>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Album Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cRe-td-GIz">
-                                            <rect key="frame" x="110" y="60" width="472" height="21"/>
-                                            <fontDescription key="fontDescription" type="system" pointSize="15"/>
-                                            <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                            <nil key="highlightedColor"/>
-                                        </label>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="To be loved" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KsQ-vI-7et">
-                                            <rect key="frame" x="110" y="0.0" width="472" height="41"/>
-                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                            <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                            <nil key="highlightedColor"/>
-                                        </label>
-                                    </subviews>
-                                </tableViewCellContentView>
-                                <connections>
-                                    <outlet property="albumName" destination="cRe-td-GIz" id="OK8-XS-gnQ"/>
-                                    <outlet property="artistName" destination="ePv-P7-LAc" id="pNw-xU-1TW"/>
-                                    <outlet property="name" destination="KsQ-vI-7et" id="C9W-OG-dlm"/>
-                                    <outlet property="photoImageView" destination="ghq-Dp-Jpg" id="D7i-dT-jxu"/>
-                                </connections>
-                            </tableViewCell>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" reuseIdentifier="SongTableViewCell" rowHeight="90" id="S4S-an-ofV" customClass="SongTableViewCell" customModule="adv_jukebox" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="272" width="600" height="90"/>
-                                <autoresizingMask key="autoresizingMask"/>
-                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" tag="1" contentMode="center" tableViewCell="S4S-an-ofV" id="6UF-Jl-45W">
-                                    <rect key="frame" x="0.0" y="0.0" width="600" height="89.5"/>
-                                    <autoresizingMask key="autoresizingMask"/>
-                                    <subviews>
-                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Grimes_Art-Angels" translatesAutoresizingMaskIntoConstraints="NO" id="x0H-O7-g9D">
-                                            <rect key="frame" x="0.0" y="0.0" width="94" height="90"/>
-                                        </imageView>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="California" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="E8J-Jn-d0c">
-                                            <rect key="frame" x="110" y="0.0" width="472" height="41"/>
-                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                            <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                            <nil key="highlightedColor"/>
-                                        </label>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Art Angels" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eNC-NA-XJf">
-                                            <rect key="frame" x="110" y="60" width="472" height="21"/>
-                                            <fontDescription key="fontDescription" type="system" pointSize="15"/>
-                                            <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                            <nil key="highlightedColor"/>
-                                        </label>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Grimes" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8oY-DG-Nvh">
-                                            <rect key="frame" x="110" y="32" width="472" height="26"/>
-                                            <fontDescription key="fontDescription" type="system" pointSize="15"/>
-                                            <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                            <nil key="highlightedColor"/>
-                                        </label>
-                                    </subviews>
-                                </tableViewCellContentView>
-                                <connections>
-                                    <outlet property="albumName" destination="eNC-NA-XJf" id="btj-OL-0f4"/>
-                                    <outlet property="artistName" destination="8oY-DG-Nvh" id="Nb2-dz-omD"/>
-                                    <outlet property="name" destination="E8J-Jn-d0c" id="C0x-8q-ZjG"/>
-                                    <outlet property="photoImageView" destination="x0H-O7-g9D" id="9Os-pk-fxu"/>
-                                </connections>
-                            </tableViewCell>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" reuseIdentifier="SongTableViewCell" rowHeight="90" id="OGj-U4-cfb" customClass="SongTableViewCell" customModule="adv_jukebox" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="362" width="600" height="90"/>
-                                <autoresizingMask key="autoresizingMask"/>
-                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" tag="1" contentMode="center" tableViewCell="OGj-U4-cfb" id="Vo1-mb-Tvr">
-                                    <rect key="frame" x="0.0" y="0.0" width="600" height="89.5"/>
-                                    <autoresizingMask key="autoresizingMask"/>
-                                    <subviews>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="The Chemical Brothers" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="IO5-xP-5aX">
-                                            <rect key="frame" x="110" y="32" width="472" height="26"/>
-                                            <fontDescription key="fontDescription" type="system" pointSize="15"/>
-                                            <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                            <nil key="highlightedColor"/>
-                                        </label>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="To be loved" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="u6h-lW-6wB">
-                                            <rect key="frame" x="110" y="0.0" width="472" height="41"/>
-                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                            <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                            <nil key="highlightedColor"/>
-                                        </label>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Born in the Echoes" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Uqh-KA-WxL">
-                                            <rect key="frame" x="110" y="60" width="472" height="21"/>
-                                            <fontDescription key="fontDescription" type="system" pointSize="15"/>
-                                            <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                            <nil key="highlightedColor"/>
-                                        </label>
-                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="TheChemicalBrothers_Born-Echoes" translatesAutoresizingMaskIntoConstraints="NO" id="d9h-Uk-Hu1">
-                                            <rect key="frame" x="0.0" y="0.0" width="94" height="90"/>
-                                        </imageView>
-                                    </subviews>
-                                </tableViewCellContentView>
-                                <connections>
-                                    <outlet property="albumName" destination="Uqh-KA-WxL" id="MR8-OY-8f9"/>
-                                    <outlet property="artistName" destination="IO5-xP-5aX" id="r9u-DY-vQl"/>
-                                    <outlet property="name" destination="u6h-lW-6wB" id="3NL-Cc-O3T"/>
-                                    <outlet property="photoImageView" destination="d9h-Uk-Hu1" id="yag-Qt-dww"/>
-                                </connections>
-                            </tableViewCell>
                         </prototypes>
                         <connections>
                             <outlet property="dataSource" destination="XnT-xT-3MD" id="1ay-5P-bdh"/>
@@ -588,7 +477,35 @@
                     </connections>
                 </searchDisplayController>
             </objects>
-            <point key="canvasLocation" x="2169" y="1943"/>
+            <point key="canvasLocation" x="2169" y="1969"/>
+        </scene>
+        <!--Table View Controller-->
+        <scene sceneID="VNE-ko-oKl">
+            <objects>
+                <tableViewController id="k01-bQ-sqs" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="C4V-sw-Edg">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="qx0-su-vy2">
+                                <rect key="frame" x="0.0" y="28" width="600" height="44"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="qx0-su-vy2" id="rrL-sf-mDP">
+                                    <rect key="frame" x="0.0" y="0.0" width="600" height="43.5"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                </tableViewCellContentView>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="k01-bQ-sqs" id="dnA-ux-XP2"/>
+                            <outlet property="delegate" destination="k01-bQ-sqs" id="Hwi-2F-YVZ"/>
+                        </connections>
+                    </tableView>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ytz-hv-8u8" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2845" y="1969"/>
         </scene>
         <!--Choose a Location-->
         <scene sceneID="MQq-qu-7O9">
@@ -599,7 +516,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <view key="tableFooterView" contentMode="center" id="DpY-yc-6AT">
-                            <rect key="frame" x="0.0" y="242" width="600" height="210"/>
+                            <rect key="frame" x="0.0" y="142" width="600" height="210"/>
                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             <subviews>
                                 <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dyI-T7-CqB">
@@ -653,58 +570,6 @@
                                     <outlet property="playlistLabel" destination="qBD-Qd-QzR" id="Q1H-lG-YJJ"/>
                                     <outlet property="typePlaylistLabel" destination="3Xf-SB-2tl" id="klB-qg-ess"/>
                                     <segue destination="XnT-xT-3MD" kind="show" id="uJe-ql-Pve"/>
-                                </connections>
-                            </tableViewCell>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" reuseIdentifier="JoinTableViewCell" rowHeight="50" id="YSF-vd-QFT" customClass="JoinTableViewCell" customModule="adv_jukebox" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="142" width="600" height="50"/>
-                                <autoresizingMask key="autoresizingMask"/>
-                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="YSF-vd-QFT" id="UIf-Mr-JxT">
-                                    <rect key="frame" x="0.0" y="0.0" width="600" height="49.5"/>
-                                    <autoresizingMask key="autoresizingMask"/>
-                                    <subviews>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Bar" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MS6-ep-oJ8">
-                                            <rect key="frame" x="19" y="29" width="291" height="21"/>
-                                            <fontDescription key="fontDescription" type="system" pointSize="15"/>
-                                            <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                            <nil key="highlightedColor"/>
-                                        </label>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Kivi Paber Kaarid" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kao-CI-Onr">
-                                            <rect key="frame" x="19" y="0.0" width="376" height="27"/>
-                                            <fontDescription key="fontDescription" type="system" pointSize="22"/>
-                                            <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                            <nil key="highlightedColor"/>
-                                        </label>
-                                    </subviews>
-                                </tableViewCellContentView>
-                                <connections>
-                                    <outlet property="playlistLabel" destination="kao-CI-Onr" id="F25-gp-k9d"/>
-                                    <outlet property="typePlaylistLabel" destination="MS6-ep-oJ8" id="8ac-AT-Jdb"/>
-                                </connections>
-                            </tableViewCell>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" reuseIdentifier="JoinTableViewCell" rowHeight="50" id="FBP-eO-pky" customClass="JoinTableViewCell" customModule="adv_jukebox" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="192" width="600" height="50"/>
-                                <autoresizingMask key="autoresizingMask"/>
-                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="FBP-eO-pky" id="fFa-rZ-uNp">
-                                    <rect key="frame" x="0.0" y="0.0" width="600" height="49.5"/>
-                                    <autoresizingMask key="autoresizingMask"/>
-                                    <subviews>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Pub" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fTU-YI-AI8">
-                                            <rect key="frame" x="19" y="29" width="291" height="21"/>
-                                            <fontDescription key="fontDescription" type="system" pointSize="15"/>
-                                            <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                            <nil key="highlightedColor"/>
-                                        </label>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Pudel Bar" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oXR-4Z-IDI">
-                                            <rect key="frame" x="19" y="0.0" width="376" height="27"/>
-                                            <fontDescription key="fontDescription" type="system" pointSize="22"/>
-                                            <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                            <nil key="highlightedColor"/>
-                                        </label>
-                                    </subviews>
-                                </tableViewCellContentView>
-                                <connections>
-                                    <outlet property="playlistLabel" destination="oXR-4Z-IDI" id="RE4-t7-p9l"/>
-                                    <outlet property="typePlaylistLabel" destination="fTU-YI-AI8" id="JbY-UA-oPh"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>
@@ -822,12 +687,9 @@
     </scenes>
     <resources>
         <image name="AboxLogo" width="950" height="541"/>
-        <image name="Bent_Intercept" width="140" height="140"/>
         <image name="Facebook Login" width="67" height="15"/>
-        <image name="Grimes_Art-Angels" width="140" height="140"/>
         <image name="PinkFloyd_Otherside" width="633" height="633"/>
         <image name="Spotify Login" width="787" height="236"/>
-        <image name="TheChemicalBrothers_Born-Echoes" width="140" height="140"/>
         <image name="Twitter Login" width="86" height="19"/>
     </resources>
 </document>
