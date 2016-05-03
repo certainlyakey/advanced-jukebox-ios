@@ -144,6 +144,7 @@ class SongTableViewController: UITableViewController{
 	
 	override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
 //		if segue.identifier == "ShowDetail" {
+		    songs.sortInPlace ({$0.votes > $1.votes})
 			let songDetailViewController = segue.destinationViewController as! SongViewController
 			
 			// Get the cell that generated this segue.
@@ -157,6 +158,9 @@ class SongTableViewController: UITableViewController{
 					selectedSong = songs[indexPath.row]
 				}
 				songDetailViewController.song = selectedSong
+				songDetailViewController.actSongID = indexPath.row
+				songDetailViewController.songs = songs
+				
 			}
 //		}
 //		else if segue.identifier == "AddItem" {

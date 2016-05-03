@@ -37,6 +37,7 @@ class SongViewController: UIViewController,UITextFieldDelegate,UIImagePickerCont
 	var currentImgURL:String = ""
 	var song: Song?
 	var songs = [Song]()
+	var actSongID : Int = 0
 	
 	
 
@@ -152,6 +153,37 @@ class SongViewController: UIViewController,UITextFieldDelegate,UIImagePickerCont
 		
 		actSongRef.updateChildValues(actVotes)
 	}
+
+    @IBAction func LeftButton1(sender: UIButton) {
+        if (actSongID > 0)
+        {
+			songs.sortInPlace ({$0.votes > $1.votes})
+            actSongID = actSongID - 1
+            song = songs[actSongID]
+            viewDidLoad()
+        }
+    }
+    
+    @IBAction func RightButton1(sender: UIButton) {
+        if (actSongID < songs.count - 1)
+        {
+            songs.sortInPlace ({$0.votes > $1.votes})
+            actSongID = actSongID + 1
+            song = songs[actSongID]
+            viewDidLoad()
+        }
+    
+    }
+    
+    
+	/*@IBAction func LeftButton(sender: UIButton) {
+		if (actSongID > 0)
+		{
+			actSongID = actSongID - 1
+			song = songs[actSongID]
+			//viewDidLoad()
+		}
+	}*/
 	
 /*	@IBAction func setDefaultLabelText(sender: UIButton) {
 		songNameLabel.text = "Added!"

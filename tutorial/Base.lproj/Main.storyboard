@@ -222,6 +222,22 @@
                                     </label>
                                 </subviews>
                             </stackView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="SMV-nn-INA">
+                                <rect key="frame" x="7" y="93" width="46" height="234"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                <state key="normal" title="&lt;"/>
+                                <connections>
+                                    <action selector="LeftButton1:" destination="BYZ-38-t0r" eventType="touchUpInside" id="DZQ-pM-g0o"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="z3e-bR-iyl">
+                                <rect key="frame" x="269" y="146" width="46" height="202"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                <state key="normal" title="&gt;"/>
+                                <connections>
+                                    <action selector="RightButton1:" destination="BYZ-38-t0r" eventType="touchUpInside" id="bzG-ZQ-xGw"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
@@ -254,7 +270,7 @@
                     </connections>
                 </tapGestureRecognizer>
             </objects>
-            <point key="canvasLocation" x="825" y="390"/>
+            <point key="canvasLocation" x="919" y="432"/>
         </scene>
         <!--Join Playlist-->
         <scene sceneID="MQq-qu-7O9">
