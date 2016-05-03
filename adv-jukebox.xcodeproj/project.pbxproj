@@ -11,6 +11,9 @@
 		79A81D881CD0EE9A00A2A0AC /* Playlist.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79A81D871CD0EE9A00A2A0AC /* Playlist.swift */; };
 		79A81D921CD232AF00A2A0AC /* JoinTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79A81D911CD232AF00A2A0AC /* JoinTableViewCell.swift */; };
 		79A81D941CD2579800A2A0AC /* JoinTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79A81D931CD2579800A2A0AC /* JoinTableViewController.swift */; };
+		79A9522F1CD8F86300488DC3 /* Join1TableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79A9522E1CD8F86300488DC3 /* Join1TableViewCell.swift */; };
+		79A952311CD9053F00488DC3 /* AddSongTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79A952301CD9053F00488DC3 /* AddSongTableViewCell.swift */; };
+		79A952331CD919C700488DC3 /* AddSongTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79A952321CD919C700488DC3 /* AddSongTableViewController.swift */; };
 		836950B41C9A168F0090B4AF /* Song.swift in Sources */ = {isa = PBXBuildFile; fileRef = 836950B31C9A168F0090B4AF /* Song.swift */; };
 		836950B61C9A19960090B4AF /* SongTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 836950B51C9A19960090B4AF /* SongTableViewCell.swift */; };
 		836950B81C9A1DFA0090B4AF /* SongTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 836950B71C9A1DFA0090B4AF /* SongTableViewController.swift */; };
@@ -26,6 +29,9 @@
 		79A81D871CD0EE9A00A2A0AC /* Playlist.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Playlist.swift; sourceTree = "<group>"; };
 		79A81D911CD232AF00A2A0AC /* JoinTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JoinTableViewCell.swift; sourceTree = "<group>"; };
 		79A81D931CD2579800A2A0AC /* JoinTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JoinTableViewController.swift; sourceTree = "<group>"; };
+		79A9522E1CD8F86300488DC3 /* Join1TableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Join1TableViewCell.swift; sourceTree = "<group>"; };
+		79A952301CD9053F00488DC3 /* AddSongTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddSongTableViewCell.swift; sourceTree = "<group>"; };
+		79A952321CD919C700488DC3 /* AddSongTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddSongTableViewController.swift; sourceTree = "<group>"; };
 		836950B31C9A168F0090B4AF /* Song.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Song.swift; sourceTree = "<group>"; };
 		836950B51C9A19960090B4AF /* SongTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SongTableViewCell.swift; sourceTree = "<group>"; };
 		836950B71C9A1DFA0090B4AF /* SongTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SongTableViewController.swift; sourceTree = "<group>"; };
@@ -78,6 +84,9 @@
 				83CE44351C87659D00B7FA5E /* AppDelegate.swift */,
 				83CE44371C87659D00B7FA5E /* SongViewController.swift */,
 				83CE44391C87659D00B7FA5E /* Main.storyboard */,
+				79A952321CD919C700488DC3 /* AddSongTableViewController.swift */,
+				79A952301CD9053F00488DC3 /* AddSongTableViewCell.swift */,
+				79A9522E1CD8F86300488DC3 /* Join1TableViewCell.swift */,
 				79A81D931CD2579800A2A0AC /* JoinTableViewController.swift */,
 				79A81D911CD232AF00A2A0AC /* JoinTableViewCell.swift */,
 				79A81D871CD0EE9A00A2A0AC /* Playlist.swift */,
@@ -237,9 +246,12 @@
 			files = (
 				836950B41C9A168F0090B4AF /* Song.swift in Sources */,
 				79A81D921CD232AF00A2A0AC /* JoinTableViewCell.swift in Sources */,
+				79A952311CD9053F00488DC3 /* AddSongTableViewCell.swift in Sources */,
 				83CE44381C87659D00B7FA5E /* SongViewController.swift in Sources */,
 				836950B61C9A19960090B4AF /* SongTableViewCell.swift in Sources */,
+				79A9522F1CD8F86300488DC3 /* Join1TableViewCell.swift in Sources */,
 				836950B81C9A1DFA0090B4AF /* SongTableViewController.swift in Sources */,
+				79A952331CD919C700488DC3 /* AddSongTableViewController.swift in Sources */,
 				83CE44361C87659D00B7FA5E /* AppDelegate.swift in Sources */,
 				79A81D881CD0EE9A00A2A0AC /* Playlist.swift in Sources */,
 				79A81D941CD2579800A2A0AC /* JoinTableViewController.swift in Sources */,
