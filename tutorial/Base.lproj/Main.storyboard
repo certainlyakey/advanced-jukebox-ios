@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10116" systemVersion="15A284" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="jHP-MY-pYl">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10116" systemVersion="15E65" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="jHP-MY-pYl">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
@@ -18,7 +18,7 @@
                                 <rect key="frame" x="0.0" y="28" width="600" height="90"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="i2b-Mq-nlG" id="S00-he-cFW">
-                                    <rect key="frame" x="0.0" y="0.0" width="600" height="89"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="600" height="89.5"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="0pU-ei-MdH">
@@ -90,7 +90,7 @@
                                 <rect key="frame" x="0.0" y="92" width="600" height="90"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" tag="1" contentMode="center" tableViewCell="Ls2-vr-hbJ" id="dfV-m8-YV8">
-                                    <rect key="frame" x="0.0" y="0.0" width="600" height="89"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="600" height="89.5"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Pink Floyd" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QmO-0c-Tfo">
@@ -139,11 +139,7 @@
                     </tableView>
                     <navigationItem key="navigationItem" title="Now Playing" id="mgs-EW-vA4">
                         <barButtonItem key="leftBarButtonItem" id="98a-nj-act"/>
-                        <barButtonItem key="rightBarButtonItem" systemItem="search" id="klx-AV-1eT">
-                            <connections>
-                                <segue destination="kpn-yf-DCY" kind="show" id="y5w-6t-lmW"/>
-                            </connections>
-                        </barButtonItem>
+                        <barButtonItem key="rightBarButtonItem" systemItem="search" id="klx-AV-1eT"/>
                     </navigationItem>
                     <refreshControl key="refreshControl" opaque="NO" multipleTouchEnabled="YES" contentMode="center" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" id="ZWZ-C2-TPn">
                         <autoresizingMask key="autoresizingMask"/>
@@ -183,22 +179,11 @@
                                     <constraint firstAttribute="width" constant="93" id="e7P-rj-AaT"/>
                                 </constraints>
                             </imageView>
-                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="BBJ-vg-y9z">
-                                <rect key="frame" x="239" y="414" width="123" height="30"/>
+                            <stackView opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="BBJ-vg-y9z">
+                                <rect key="frame" x="239" y="414" width="123" height="50"/>
                                 <subviews>
-                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="AE7-kt-h3P">
-                                        <rect key="frame" x="0.0" y="0.0" width="123" height="30"/>
-                                        <subviews>
-                                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" text="Type Username" borderStyle="roundedRect" textAlignment="natural" clearsOnBeginEditing="YES" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="owc-fs-9sM">
-                                                <rect key="frame" x="0.0" y="0.0" width="123" height="30"/>
-                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                                <textInputTraits key="textInputTraits"/>
-                                            </textField>
-                                        </subviews>
-                                        <constraints>
-                                            <constraint firstItem="owc-fs-9sM" firstAttribute="centerY" secondItem="AE7-kt-h3P" secondAttribute="centerY" constant="150" id="O3f-jM-ryX"/>
-                                            <constraint firstItem="owc-fs-9sM" firstAttribute="centerY" secondItem="AE7-kt-h3P" secondAttribute="centerY" id="mn0-HK-kiy"/>
-                                        </constraints>
+                                    <stackView opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="AE7-kt-h3P">
+                                        <rect key="frame" x="0.0" y="0.0" width="123" height="50"/>
                                     </stackView>
                                 </subviews>
                             </stackView>
@@ -261,6 +246,11 @@ your favorite music in public spaces.</string>
                                 <rect key="frame" x="355" y="540" width="52" height="30"/>
                                 <state key="normal" title="Sign up"/>
                             </button>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" text="Type Username" borderStyle="roundedRect" textAlignment="center" clearsOnBeginEditing="YES" adjustsFontSizeToFit="NO" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="owc-fs-9sM">
+                                <rect key="frame" x="180" y="414" width="238" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
@@ -277,12 +267,14 @@ your favorite music in public spaces.</string>
                             <constraint firstItem="BBJ-vg-y9z" firstAttribute="top" secondItem="tE1-XS-sZk" secondAttribute="bottom" constant="34" id="K8b-vq-x0H"/>
                             <constraint firstItem="AXZ-6r-3PB" firstAttribute="centerX" secondItem="yBj-Ae-Zz2" secondAttribute="centerX" constant="-1" id="MSH-hp-tbV"/>
                             <constraint firstItem="tkm-0A-aSe" firstAttribute="centerX" secondItem="yBj-Ae-Zz2" secondAttribute="centerX" constant="81" id="NLV-aW-Np6"/>
+                            <constraint firstItem="owc-fs-9sM" firstAttribute="leading" secondItem="Pto-QY-zLS" secondAttribute="leading" id="ORT-yI-oVC"/>
                             <constraint firstItem="Qx5-sn-VVs" firstAttribute="leading" secondItem="Pto-QY-zLS" secondAttribute="leading" id="SCV-bR-C03"/>
                             <constraint firstItem="Pto-QY-zLS" firstAttribute="centerY" secondItem="yBj-Ae-Zz2" secondAttribute="centerY" constant="179" id="Spa-Ad-K82"/>
                             <constraint firstItem="uat-nB-8qd" firstAttribute="centerY" secondItem="tE1-XS-sZk" secondAttribute="centerY" id="TB5-nB-omN"/>
                             <constraint firstItem="BBJ-vg-y9z" firstAttribute="centerX" secondItem="yBj-Ae-Zz2" secondAttribute="centerX" id="WSV-ml-AGC"/>
                             <constraint firstItem="Wbp-tF-pc2" firstAttribute="leading" secondItem="yBj-Ae-Zz2" secondAttribute="leadingMargin" constant="43" id="WSd-oQ-i2m"/>
                             <constraint firstItem="Qx5-sn-VVs" firstAttribute="top" secondItem="AXZ-6r-3PB" secondAttribute="bottom" constant="22" id="Wia-ip-b2M"/>
+                            <constraint firstItem="owc-fs-9sM" firstAttribute="trailing" secondItem="Qx5-sn-VVs" secondAttribute="trailing" id="aZl-uL-Tnq"/>
                             <constraint firstItem="tE1-XS-sZk" firstAttribute="top" secondItem="Qx5-sn-VVs" secondAttribute="bottom" constant="7" id="cmR-L3-MAc"/>
                             <constraint firstItem="fsy-kI-Zco" firstAttribute="top" secondItem="Wde-Kt-hrf" secondAttribute="bottom" constant="12" id="hhj-MN-Pkb"/>
                             <constraint firstItem="BBJ-vg-y9z" firstAttribute="centerX" secondItem="yBj-Ae-Zz2" secondAttribute="centerX" id="o7u-lD-uw5"/>
@@ -296,6 +288,7 @@ your favorite music in public spaces.</string>
                             <constraint firstItem="Wbp-tF-pc2" firstAttribute="bottom" secondItem="AXZ-6r-3PB" secondAttribute="bottom" id="t24-xb-cf0"/>
                             <constraint firstItem="uat-nB-8qd" firstAttribute="top" secondItem="Qx5-sn-VVs" secondAttribute="bottom" constant="9" id="tix-Zo-iP9"/>
                             <constraint firstItem="Pto-QY-zLS" firstAttribute="top" secondItem="uat-nB-8qd" secondAttribute="bottom" constant="87" id="uX9-b7-yfT"/>
+                            <constraint firstItem="owc-fs-9sM" firstAttribute="top" secondItem="BBJ-vg-y9z" secondAttribute="top" id="yBY-TS-U13"/>
                             <constraint firstItem="tE1-XS-sZk" firstAttribute="leading" secondItem="uat-nB-8qd" secondAttribute="trailing" constant="14" id="yYi-iW-eCO"/>
                             <constraint firstItem="AXZ-6r-3PB" firstAttribute="top" secondItem="7Fq-sV-dMC" secondAttribute="bottom" constant="87" id="ycu-bj-oz2"/>
                             <constraint firstItem="hSN-wY-obc" firstAttribute="leading" secondItem="tE1-XS-sZk" secondAttribute="trailing" constant="16" id="yzc-ia-aQG"/>
@@ -346,31 +339,31 @@ your favorite music in public spaces.</string>
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Us and Them" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="adV-KU-qWE">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="Us and Them" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="adV-KU-qWE">
                                 <rect key="frame" x="29" y="83" width="543" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <stackView opaque="NO" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="KDh-3h-CgD">
-                                <rect key="frame" x="230" y="461" width="140" height="21"/>
+                            <stackView opaque="NO" contentMode="scaleToFill" fixedFrame="YES" axis="vertical" distribution="equalSpacing" translatesAutoresizingMaskIntoConstraints="NO" id="KDh-3h-CgD">
+                                <rect key="frame" x="172" y="408" width="76" height="59"/>
                                 <subviews>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1PC-De-t5d">
-                                        <rect key="frame" x="0.0" y="0.0" width="76" height="21"/>
+                                    <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1PC-De-t5d">
+                                        <rect key="frame" x="0.0" y="0.0" width="76" height="18"/>
                                         <inset key="contentEdgeInsets" minX="20" minY="0.0" maxX="20" maxY="0.0"/>
                                         <state key="normal" title="Vote!"/>
                                         <connections>
                                             <action selector="VoteButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="3zx-3u-Zbn"/>
                                         </connections>
                                     </button>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Votes: " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TMx-5l-AGv">
-                                        <rect key="frame" x="76" y="0.0" width="53" height="21"/>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="Votes: " textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TMx-5l-AGv">
+                                        <rect key="frame" x="0.0" y="18" width="76" height="21"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="os6-4Z-Tai">
-                                        <rect key="frame" x="129" y="0.0" width="11" height="21"/>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="0" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="os6-4Z-Tai">
+                                        <rect key="frame" x="0.0" y="39" width="76" height="21"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                         <nil key="highlightedColor"/>
@@ -381,53 +374,35 @@ your favorite music in public spaces.</string>
                                 <rect key="frame" x="7" y="93" width="46" height="234"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="30"/>
                                 <state key="normal" title="&lt;"/>
-                                <connections>
-                                    <action selector="LeftButton1:" destination="BYZ-38-t0r" eventType="touchUpInside" id="DZQ-pM-g0o"/>
-                                </connections>
                             </button>
-                            <imageView contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="PinkFloyd_Otherside" translatesAutoresizingMaskIntoConstraints="NO" id="m4l-bi-D7J">
+                            <imageView contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" image="PinkFloyd_Otherside" translatesAutoresizingMaskIntoConstraints="NO" id="m4l-bi-D7J">
                                 <rect key="frame" x="234" y="188" width="133" height="132"/>
                                 <gestureRecognizers/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="132" id="Bui-Ml-6vh"/>
                                     <constraint firstAttribute="width" constant="133" id="Rho-Cd-g7p"/>
                                 </constraints>
-                                <connections>
-                                    <outletCollection property="gestureRecognizers" destination="lGt-e6-XrV" appends="YES" id="Sfw-yn-Hsf"/>
-                                </connections>
                             </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Will play in" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="X3b-UK-tqD">
-                                <rect key="frame" x="102" y="463" width="82" height="21"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Will play in" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="X3b-UK-tqD">
+                                <rect key="frame" x="102" y="438" width="82" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Votes" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OnQ-5t-Sd8">
-                                <rect key="frame" x="278" y="463" width="44" height="21"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="Cost" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tPM-Kg-Oei">
+                                <rect key="frame" x="440" y="438" width="36" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Cost" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tPM-Kg-Oei">
-                                <rect key="frame" x="440" y="463" width="36" height="21"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="12 minutes" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zD6-bQ-Fp0">
+                                <rect key="frame" x="104" y="467" width="83" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="12 minutes" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zD6-bQ-Fp0">
-                                <rect key="frame" x="104" y="492" width="83" height="21"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="16" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="X7N-rE-975">
-                                <rect key="frame" x="291" y="491" width="18" height="21"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="1 Beer" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Vsp-q6-ont">
-                                <rect key="frame" x="434" y="492" width="48" height="21"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="1 Beer" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Vsp-q6-ont">
+                                <rect key="frame" x="434" y="467" width="48" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
@@ -436,24 +411,21 @@ your favorite music in public spaces.</string>
                                 <rect key="frame" x="116" y="403" width="54" height="30"/>
                                 <state key="normal" title="Preview"/>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HhF-x0-lgM">
+                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HhF-x0-lgM">
                                 <rect key="frame" x="436" y="403" width="40" height="30"/>
                                 <state key="normal" title="Share"/>
                             </button>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="Upvote" translatesAutoresizingMaskIntoConstraints="NO" id="yKB-CM-hlg">
-                                <rect key="frame" x="277" y="356" width="47" height="43"/>
+                            <imageView userInteractionEnabled="NO" alpha="0.0" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" image="Upvote" translatesAutoresizingMaskIntoConstraints="NO" id="yKB-CM-hlg">
+                                <rect key="frame" x="230" y="357" width="47" height="43"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="47" id="ebL-5c-8hm"/>
                                     <constraint firstAttribute="height" constant="43" id="xEF-Pl-kjz"/>
                                 </constraints>
                             </imageView>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="z3e-bR-iyl">
-                                <rect key="frame" x="276" y="101" width="46" height="202"/>
+                                <rect key="frame" x="369" y="116" width="46" height="202"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="30"/>
                                 <state key="normal" title="&gt;"/>
-                                <connections>
-                                    <action selector="RightButton1:" destination="BYZ-38-t0r" eventType="touchUpInside" id="bzG-ZQ-xGw"/>
-                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
@@ -461,21 +433,15 @@ your favorite music in public spaces.</string>
                             <constraint firstItem="m4l-bi-D7J" firstAttribute="centerX" secondItem="lgN-jF-e4Q" secondAttribute="centerX" id="2lF-Ni-RwP"/>
                             <constraint firstItem="X3b-UK-tqD" firstAttribute="top" secondItem="PbA-JS-fTR" secondAttribute="bottom" constant="30" id="2uU-Fc-Tce"/>
                             <constraint firstItem="lgN-jF-e4Q" firstAttribute="top" secondItem="v8z-ZC-8qi" secondAttribute="bottom" constant="14" id="BHl-CI-fHV"/>
-                            <constraint firstItem="OnQ-5t-Sd8" firstAttribute="baseline" secondItem="tPM-Kg-Oei" secondAttribute="baseline" id="BRw-Tf-N4c"/>
-                            <constraint firstItem="OnQ-5t-Sd8" firstAttribute="top" secondItem="1PC-De-t5d" secondAttribute="bottom" constant="36" id="D9f-M7-WkW"/>
                             <constraint firstItem="1PC-De-t5d" firstAttribute="top" secondItem="yKB-CM-hlg" secondAttribute="bottom" constant="8" symbolic="YES" id="Kld-Kg-QoH"/>
                             <constraint firstItem="zD6-bQ-Fp0" firstAttribute="baseline" secondItem="Vsp-q6-ont" secondAttribute="baseline" id="OSf-11-liz"/>
                             <constraint firstItem="tPM-Kg-Oei" firstAttribute="top" secondItem="HhF-x0-lgM" secondAttribute="bottom" constant="30" id="PQW-h1-eR1"/>
                             <constraint firstItem="yKB-CM-hlg" firstAttribute="top" secondItem="m4l-bi-D7J" secondAttribute="bottom" constant="38" id="QLU-kc-8ir"/>
-                            <constraint firstItem="X7N-rE-975" firstAttribute="top" secondItem="OnQ-5t-Sd8" secondAttribute="bottom" constant="7" id="R7G-7y-dcI"/>
                             <constraint firstItem="zD6-bQ-Fp0" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="84" id="XVl-wu-6SZ"/>
                             <constraint firstItem="zD6-bQ-Fp0" firstAttribute="top" secondItem="X3b-UK-tqD" secondAttribute="bottom" constant="8" symbolic="YES" id="ZNI-26-6nm"/>
                             <constraint firstItem="m4l-bi-D7J" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="aF0-cQ-9wo"/>
-                            <constraint firstItem="OnQ-5t-Sd8" firstAttribute="centerX" secondItem="X7N-rE-975" secondAttribute="centerX" id="aIu-hg-Ywu"/>
-                            <constraint firstItem="X3b-UK-tqD" firstAttribute="baseline" secondItem="OnQ-5t-Sd8" secondAttribute="baseline" id="alv-Qq-BER"/>
                             <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="QlM-sl-z1j" secondAttribute="bottom" constant="13" id="bvb-uu-RXC"/>
                             <constraint firstAttribute="trailingMargin" secondItem="Vsp-q6-ont" secondAttribute="trailing" constant="98" id="ewM-M7-RU7"/>
-                            <constraint firstItem="X7N-rE-975" firstAttribute="centerX" secondItem="QlM-sl-z1j" secondAttribute="centerX" id="fnS-7f-mOV"/>
                             <constraint firstItem="QlM-sl-z1j" firstAttribute="top" secondItem="zD6-bQ-Fp0" secondAttribute="bottom" constant="44" id="gDe-Zs-WqI"/>
                             <constraint firstItem="tPM-Kg-Oei" firstAttribute="centerX" secondItem="Vsp-q6-ont" secondAttribute="centerX" id="gdu-cd-dVa"/>
                             <constraint firstItem="v8z-ZC-8qi" firstAttribute="leading" secondItem="adV-KU-qWE" secondAttribute="leading" id="geq-lt-Kx4"/>
@@ -485,7 +451,6 @@ your favorite music in public spaces.</string>
                             <constraint firstItem="X3b-UK-tqD" firstAttribute="centerX" secondItem="zD6-bQ-Fp0" secondAttribute="centerX" constant="-2.5" id="vNk-S7-S1r"/>
                             <constraint firstItem="v8z-ZC-8qi" firstAttribute="leading" secondItem="lgN-jF-e4Q" secondAttribute="leading" id="wGY-Lu-Grh"/>
                             <constraint firstItem="tPM-Kg-Oei" firstAttribute="trailing" secondItem="HhF-x0-lgM" secondAttribute="trailing" id="wrx-e6-dwL"/>
-                            <constraint firstItem="OnQ-5t-Sd8" firstAttribute="centerX" secondItem="1PC-De-t5d" secondAttribute="centerX" id="xj8-fY-8jg"/>
                             <constraint firstItem="v8z-ZC-8qi" firstAttribute="trailing" secondItem="lgN-jF-e4Q" secondAttribute="trailing" id="y60-qv-b8v"/>
                             <constraint firstItem="QlM-sl-z1j" firstAttribute="centerX" secondItem="m4l-bi-D7J" secondAttribute="centerX" id="z9D-tm-I58"/>
                         </constraints>
@@ -494,17 +459,12 @@ your favorite music in public spaces.</string>
                         <outlet property="UILabelAlbum" destination="v8z-ZC-8qi" id="cw2-AS-Tut"/>
                         <outlet property="UILabelArtist" destination="lgN-jF-e4Q" id="mU9-bE-2Ft"/>
                         <outlet property="UILabelSong" destination="adV-KU-qWE" id="ao8-Ob-iCH"/>
-                        <outlet property="VotesNUmberLabel" destination="os6-4Z-Tai" id="6U7-rN-gsl"/>
                         <outlet property="VotesNumberLabel" destination="os6-4Z-Tai" id="FLe-D3-IZF"/>
                         <outlet property="photoImageView" destination="m4l-bi-D7J" id="RdE-uG-Eee"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
-                <tapGestureRecognizer id="lGt-e6-XrV">
-                    <connections>
-                        <action selector="selectImageFromPhotoLibrary:" destination="BYZ-38-t0r" id="62p-qg-gRh"/>
-                    </connections>
-                </tapGestureRecognizer>
+                <tapGestureRecognizer id="lGt-e6-XrV"/>
             </objects>
             <point key="canvasLocation" x="2169" y="1169"/>
         </scene>
@@ -531,7 +491,7 @@ your favorite music in public spaces.</string>
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" selectionStyle="default" indentationWidth="10" translatesAutoresizingMaskIntoConstraints="NO" id="22Y-43-sLz">
                                 <rect key="frame" x="140" y="177" width="320" height="44"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="22Y-43-sLz" id="OVl-aS-nkg">
-                                    <rect key="frame" x="0.0" y="0.0" width="320" height="43"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="320" height="43.5"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rFR-Po-URW">
@@ -556,7 +516,7 @@ your favorite music in public spaces.</string>
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" selectionStyle="default" indentationWidth="10" translatesAutoresizingMaskIntoConstraints="NO" id="p7n-NH-97E">
                                 <rect key="frame" x="140" y="229" width="320" height="44"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="p7n-NH-97E" id="Qvp-qk-wG0">
-                                    <rect key="frame" x="0.0" y="0.0" width="320" height="43"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="320" height="43.5"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="d6C-0n-oyY">
@@ -581,7 +541,7 @@ your favorite music in public spaces.</string>
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" selectionStyle="default" indentationWidth="10" translatesAutoresizingMaskIntoConstraints="NO" id="mdE-6b-vCY">
                                 <rect key="frame" x="140" y="281" width="320" height="44"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="mdE-6b-vCY" id="mUa-N8-ISN">
-                                    <rect key="frame" x="0.0" y="0.0" width="320" height="43"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="320" height="43.5"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YPO-2i-ZDs">
@@ -606,7 +566,7 @@ your favorite music in public spaces.</string>
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" selectionStyle="default" indentationWidth="10" translatesAutoresizingMaskIntoConstraints="NO" id="p6C-IL-bkl">
                                 <rect key="frame" x="140" y="333" width="320" height="44"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="p6C-IL-bkl" id="GUc-a8-olm">
-                                    <rect key="frame" x="0.0" y="0.0" width="320" height="43"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="320" height="43.5"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jIx-Sm-Rc6">
@@ -631,7 +591,7 @@ your favorite music in public spaces.</string>
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" selectionStyle="default" indentationWidth="10" translatesAutoresizingMaskIntoConstraints="NO" id="oqx-2x-SIB">
                                 <rect key="frame" x="140" y="385" width="320" height="44"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="oqx-2x-SIB" id="veI-wI-6vE">
-                                    <rect key="frame" x="0.0" y="0.0" width="320" height="43"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="320" height="43.5"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2Ir-OO-J0L">
@@ -656,7 +616,7 @@ your favorite music in public spaces.</string>
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" selectionStyle="default" indentationWidth="10" translatesAutoresizingMaskIntoConstraints="NO" id="uQy-r3-H1r">
                                 <rect key="frame" x="140" y="437" width="320" height="44"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="uQy-r3-H1r" id="9so-Kt-jK4">
-                                    <rect key="frame" x="0.0" y="0.0" width="320" height="43"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="320" height="43.5"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZLg-SZ-omZ">
@@ -715,7 +675,7 @@ your favorite music in public spaces.</string>
                                 <rect key="frame" x="0.0" y="28" width="600" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="qx0-su-vy2" id="rrL-sf-mDP">
-                                    <rect key="frame" x="0.0" y="0.0" width="600" height="43"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="600" height="43.5"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                 </tableViewCellContentView>
                             </tableViewCell>
@@ -793,7 +753,7 @@ your favorite music in public spaces.</string>
                                 <rect key="frame" x="0.0" y="92" width="600" height="50"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="PkU-tv-PlH" id="rrh-mr-HIk">
-                                    <rect key="frame" x="0.0" y="0.0" width="600" height="49"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="600" height="49.5"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3Xf-SB-2tl">
@@ -875,7 +835,7 @@ your favorite music in public spaces.</string>
                                         <rect key="frame" x="0.0" y="28" width="600" height="50"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="ZiY-xJ-Ljh" id="wDy-bF-y9k">
-                                            <rect key="frame" x="0.0" y="0.0" width="600" height="49"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="600" height="49.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                         </tableViewCellContentView>
                                     </tableViewCell>
@@ -980,7 +940,7 @@ your favorite music in public spaces.</string>
                             <rect key="frame" x="0.0" y="28" width="600" height="50"/>
                             <autoresizingMask key="autoresizingMask"/>
                             <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="Dqb-LT-1NU" id="ltQ-cc-DeP">
-                                <rect key="frame" x="0.0" y="0.0" width="600" height="49"/>
+                                <rect key="frame" x="0.0" y="0.0" width="600" height="49.5"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NlT-eX-Sj0">
@@ -1027,7 +987,7 @@ your favorite music in public spaces.</string>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ulg-dU-t1p" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1459" y="375"/>
+            <point key="canvasLocation" x="1731" y="-353"/>
         </scene>
     </scenes>
     <resources>
