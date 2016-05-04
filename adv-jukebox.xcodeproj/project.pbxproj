@@ -14,6 +14,7 @@
 		79A9522F1CD8F86300488DC3 /* Join1TableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79A9522E1CD8F86300488DC3 /* Join1TableViewCell.swift */; };
 		79A952311CD9053F00488DC3 /* AddSongTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79A952301CD9053F00488DC3 /* AddSongTableViewCell.swift */; };
 		79A952331CD919C700488DC3 /* AddSongTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79A952321CD919C700488DC3 /* AddSongTableViewController.swift */; };
+		79FC4E631CD9F6D6003C76F5 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79FC4E621CD9F6D6003C76F5 /* LoginViewController.swift */; };
 		836950B41C9A168F0090B4AF /* Song.swift in Sources */ = {isa = PBXBuildFile; fileRef = 836950B31C9A168F0090B4AF /* Song.swift */; };
 		836950B61C9A19960090B4AF /* SongTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 836950B51C9A19960090B4AF /* SongTableViewCell.swift */; };
 		836950B81C9A1DFA0090B4AF /* SongTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 836950B71C9A1DFA0090B4AF /* SongTableViewController.swift */; };
@@ -32,6 +33,7 @@
 		79A9522E1CD8F86300488DC3 /* Join1TableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Join1TableViewCell.swift; sourceTree = "<group>"; };
 		79A952301CD9053F00488DC3 /* AddSongTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddSongTableViewCell.swift; sourceTree = "<group>"; };
 		79A952321CD919C700488DC3 /* AddSongTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddSongTableViewController.swift; sourceTree = "<group>"; };
+		79FC4E621CD9F6D6003C76F5 /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		836950B31C9A168F0090B4AF /* Song.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Song.swift; sourceTree = "<group>"; };
 		836950B51C9A19960090B4AF /* SongTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SongTableViewCell.swift; sourceTree = "<group>"; };
 		836950B71C9A1DFA0090B4AF /* SongTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SongTableViewController.swift; sourceTree = "<group>"; };
@@ -84,6 +86,7 @@
 				83CE44351C87659D00B7FA5E /* AppDelegate.swift */,
 				83CE44371C87659D00B7FA5E /* SongViewController.swift */,
 				83CE44391C87659D00B7FA5E /* Main.storyboard */,
+				79FC4E621CD9F6D6003C76F5 /* LoginViewController.swift */,
 				79A952321CD919C700488DC3 /* AddSongTableViewController.swift */,
 				79A952301CD9053F00488DC3 /* AddSongTableViewCell.swift */,
 				79A9522E1CD8F86300488DC3 /* Join1TableViewCell.swift */,
@@ -244,6 +247,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				79FC4E631CD9F6D6003C76F5 /* LoginViewController.swift in Sources */,
 				836950B41C9A168F0090B4AF /* Song.swift in Sources */,
 				79A81D921CD232AF00A2A0AC /* JoinTableViewCell.swift in Sources */,
 				79A952311CD9053F00488DC3 /* AddSongTableViewCell.swift in Sources */,

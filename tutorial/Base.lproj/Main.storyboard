@@ -149,7 +149,7 @@
         <!--Login-->
         <scene sceneID="4Yl-4A-fRL">
             <objects>
-                <viewController title="Login" id="jHP-MY-pYl" sceneMemberID="viewController">
+                <viewController title="Login" id="jHP-MY-pYl" customClass="LoginViewController" customModule="adv_jukebox" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="Abg-Wz-e3j"/>
                         <viewControllerLayoutGuide type="bottom" id="rUK-Ov-xJU"/>
@@ -246,7 +246,10 @@ your favorite music in public spaces.</string>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" text="Type Password" borderStyle="roundedRect" textAlignment="center" clearsOnBeginEditing="YES" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Pto-QY-zLS">
                                 <rect key="frame" x="180" y="464" width="239" height="30"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no" secureTextEntry="YES"/>
+                                <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no"/>
+                                <connections>
+                                    <action selector="StartTypingPassword:" destination="jHP-MY-pYl" eventType="editingDidBegin" id="ZMS-El-VKG"/>
+                                </connections>
                             </textField>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -297,6 +300,9 @@ your favorite music in public spaces.</string>
                             </mask>
                         </variation>
                     </view>
+                    <connections>
+                        <outlet property="PasswordTextField" destination="Pto-QY-zLS" id="MoB-WL-ZRi"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="lVa-Zk-J4k" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
