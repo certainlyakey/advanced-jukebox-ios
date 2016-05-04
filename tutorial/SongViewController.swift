@@ -158,17 +158,17 @@ class SongViewController: UIViewController,UITextFieldDelegate,UIImagePickerCont
 		actSongRef.updateChildValues(actVotes)
 	}
 
-    @IBAction func LeftButton1(sender: UIButton) {
+    @IBAction func LeftSongButton(sender: UIButton) {
         if (actSongID > 0)
         {
-			songs.sortInPlace ({$0.votes > $1.votes})
+            songs.sortInPlace ({$0.votes > $1.votes})
             actSongID = actSongID - 1
             song = songs[actSongID]
             viewDidLoad()
         }
     }
     
-    @IBAction func RightButton1(sender: UIButton) {
+    @IBAction func RightSongButton(sender: AnyObject) {
         if (actSongID < songs.count - 1)
         {
             songs.sortInPlace ({$0.votes > $1.votes})
@@ -176,8 +176,28 @@ class SongViewController: UIViewController,UITextFieldDelegate,UIImagePickerCont
             song = songs[actSongID]
             viewDidLoad()
         }
-    
     }
+    
+ /*   @IBAction func RightButton3(sender: UIButton) {
+        if (actSongID < songs.count - 1)
+        {
+            songs.sortInPlace ({$0.votes > $1.votes})
+            actSongID = actSongID + 1
+            song = songs[actSongID]
+            viewDidLoad()
+        }
+    }
+    
+    @IBAction func LeftButton3(sender: AnyObject) {
+        if (actSongID > 0)
+        {
+            songs.sortInPlace ({$0.votes > $1.votes})
+            actSongID = actSongID - 1
+            song = songs[actSongID]
+            viewDidLoad()
+        }
+    }*/
+
     
     
 	/*@IBAction func LeftButton(sender: UIButton) {
