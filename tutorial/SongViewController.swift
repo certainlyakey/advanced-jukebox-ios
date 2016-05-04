@@ -17,9 +17,11 @@ class SongViewController: UIViewController,UITextFieldDelegate,UIImagePickerCont
 
 
 	//UI vars
-	@IBOutlet weak var songNameLabel: UILabel!
+//	@IBOutlet weak var songNameLabel: UILabel!
 	
-	@IBOutlet weak var VotesNumberLabel: UILabel!
+
+  
+    @IBOutlet weak var VotesNumberLabel: UILabel!
 
 	@IBOutlet weak var UILabelAlbum: UILabel!
 	@IBOutlet weak var UILabelSong: UILabel!
@@ -43,6 +45,8 @@ class SongViewController: UIViewController,UITextFieldDelegate,UIImagePickerCont
 
 	override func viewDidLoad() {
 		super.viewDidLoad()
+		
+	//	UILabelSong.delegate = self
 		
 		if let song = song {
 			currentImgURL = song.imgurl!
