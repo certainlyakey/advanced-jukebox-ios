@@ -30,10 +30,11 @@ class JoinTableViewController: UITableViewController {
 	
 	func loadSamplePlaylists() {
 		self.playlists = []
-		let playlist1 = Playlist (id : 1, name : "Playlist", type : "pub")!
-		let playlist2 = Playlist (id : 2, name : "Playlist1", type : "bar")!
+		let playlist1 = Playlist (id : 1, name : "Garage48", type : "hub")!
+		let playlist2 = Playlist (id : 2, name : "Hollywood", type : "club")!
+        let playlist3 = Playlist (id : 3, name : "Big door", type : "pub")!
 		
-		self.playlists += [playlist1, playlist2]
+		self.playlists += [playlist1, playlist2, playlist3]
 		
 	}
 
