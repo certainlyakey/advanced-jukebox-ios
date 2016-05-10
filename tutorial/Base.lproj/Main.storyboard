@@ -367,13 +367,6 @@ your favorite music in public spaces.</string>
                                     <action selector="RightSongButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="pTx-oG-QEt"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QlM-sl-z1j">
-                                <rect key="frame" x="227" y="542" width="299" height="30"/>
-                                <state key="normal" title="Send info about this song to another device"/>
-                                <connections>
-                                    <action selector="fbAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="iDL-EH-HgG"/>
-                                </connections>
-                            </button>
                             <stackView opaque="NO" contentMode="scaleToFill" misplaced="YES" distribution="equalCentering" spacing="12" translatesAutoresizingMaskIntoConstraints="NO" id="c5a-bM-Uzh">
                                 <rect key="frame" x="75" y="420" width="280" height="71"/>
                                 <subviews>
@@ -472,16 +465,13 @@ your favorite music in public spaces.</string>
                             <constraint firstItem="Yxj-Pv-DTB" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" constant="174" id="ZFk-6d-cie"/>
                             <constraint firstItem="m4l-bi-D7J" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="aF0-cQ-9wo"/>
                             <constraint firstItem="c5a-bM-Uzh" firstAttribute="top" secondItem="Yxj-Pv-DTB" secondAttribute="bottom" constant="8" symbolic="YES" id="aU1-CM-9SZ"/>
-                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="QlM-sl-z1j" secondAttribute="bottom" constant="13" id="bvb-uu-RXC"/>
                             <constraint firstItem="v8z-ZC-8qi" firstAttribute="leading" secondItem="adV-KU-qWE" secondAttribute="leading" id="geq-lt-Kx4"/>
-                            <constraint firstItem="QlM-sl-z1j" firstAttribute="top" secondItem="c5a-bM-Uzh" secondAttribute="bottom" constant="51" id="h1a-Ex-T6q"/>
                             <constraint firstItem="c5a-bM-Uzh" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="hXp-fV-ZR9"/>
                             <constraint firstItem="Yxj-Pv-DTB" firstAttribute="top" secondItem="lgN-jF-e4Q" secondAttribute="bottom" id="mBB-nE-mVs"/>
                             <constraint firstItem="adV-KU-qWE" firstAttribute="top" secondItem="m4l-bi-D7J" secondAttribute="bottom" constant="-237" id="nqz-Rg-Zcs"/>
                             <constraint firstItem="m4l-bi-D7J" firstAttribute="centerX" secondItem="adV-KU-qWE" secondAttribute="centerX" id="pcQ-OL-NxF"/>
                             <constraint firstItem="v8z-ZC-8qi" firstAttribute="leading" secondItem="lgN-jF-e4Q" secondAttribute="leading" id="wGY-Lu-Grh"/>
                             <constraint firstItem="v8z-ZC-8qi" firstAttribute="trailing" secondItem="lgN-jF-e4Q" secondAttribute="trailing" id="y60-qv-b8v"/>
-                            <constraint firstItem="QlM-sl-z1j" firstAttribute="centerX" secondItem="m4l-bi-D7J" secondAttribute="centerX" id="z9D-tm-I58"/>
                         </constraints>
                     </view>
                     <connections>
