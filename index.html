@@ -1,6 +1,8 @@
 <!DOCTYPE html>
 <html>
 	<head>
+        <link href='https://fonts.googleapis.com/css?family=Montserrat:400,700' rel='stylesheet' type='text/css'>
+        <link href='https://cdnjs.cloudflare.com/ajax/libs/normalize/4.1.1/normalize.min.css' rel='stylesheet' type='text/css'>
 		<link href="web-resources/styles.css" rel="stylesheet" type="text/css" />
         <script src='https://code.jquery.com/jquery-2.2.2.min.js'></script>
         <script src='https://cdn.firebase.com/js/client/2.2.1/firebase.js'></script>
@@ -8,112 +10,34 @@
         <meta charset="UTF-8">
     </head>
     <body>
-                
-    <div id="container">
-     
-            <div id="Header"><h1> Advanced Jukebox </h1></div>
-             <div id="sidebar">  
-<<<<<<< Updated upstream
-                              
-                     
-                              <div class="boxed">
-                                     <img class="album" src="web-resources/img/pink-floyd.jpg" syle="width:20%">
-                            <img class="vote" src="web-resources/img/warranty24-512.png" style="width: 30px;
-                                         height: 30px;"/>
-                                  <div class="text">
-                                  Pink floyed - Speak to me 
-                                  </div>
-                                 </div>
-                                  <div class="boxed">
-                                     <img class="album" src="web-resources/img/Bent%20-%20Intercept.png" syle="width:20%">
-                                   <img class="vote" src="web-resources/img/warranty24-512.png" style="width: 30px;height: 30px;"/>
-                                      <div class="text">
-                                     Bent-Intercept </div>
-                                 </div>
-                                  <div class="boxed">
-                                      <img class="album" src="web-resources/img/Grimes%20-%20Art%20Angels.png"                                             syle="width:20%">
-                                        <img class="vote" src="web-resources/img/warranty24-512.png" style="width: 30px; height: 30px;"/>
-                                         <div class="text">
-                                   Grimes-Angels
-                                      </div>
-                                 </div>
-                                 <div class="boxed">
-                                      <img class="album" src="web-resources/img/chemical.png" syle="width:20%">
-                                     <img class="vote" src="web-resources/img/warranty24-512.png" style="width: 30px; height: 30px;" />
-                                 <div class="text">The Chemical Brothers-Born in the Echoes
-                                     </div>          
-                              </div>
-                                 
-                              
-                             </div>
-=======
-                 
         
-                 <div class="boxed">
-                        <img class="album" src="pink-floyd.jpg" syle="width:20%">
-               
-                         <div class="box">    
-        <label for="qty"><abbr title="Quantity">Votes</abbr></label>
-        <input id="qty" value="0" />
-    </div>
-                     <div class="text">
-                     Pink floyed - Speak to me 
-                     </div>
-                    </div>
-                     <div class="boxed">
-                        <img class="album" src="Bent%20-%20Intercept.png" syle="width:20%">
-                      <div class="box">    
-        <label for="qty"><abbr title="Quantity">Votes</abbr></label>
-        <input id="qty" value="0" />
-    </div>                      
-                         <div class="text">
-                        Bent-Intercept </div>
-                    </div>
-                     <div class="boxed">
-                         <img class="album" src="Grimes%20-%20Art%20Angels.png"                                             syle="width:20%">
-                           <div class="box">    
-        <label for="qty"><abbr title="Quantity">Votes</abbr></label>
-        <input id="qty" value="0" />
-    </div>                     
-                            <div class="text">
-                      Grimes-Angels
-                         </div>
-                    </div>
-                    <div class="boxed">
-                         <img class="album" src="The%20chemical%20brothers%20-%20born%20in%20the%20echoes.png" syle="width:20%">
-                         <div class="box">    
-        <label for="qty"><abbr title="Quantity">Votes</abbr></label>
-        <input id="qty" value="0" />
-    </div>
-                    <div class="text">Chemical Brothers-Born in Echoes
-                        </div>          
-                 </div>
+        <header class="header">
+            <h1>Advanced Jukebox</h1>
+        </header>
+        
+        <aside class="aside">
+            <ul id="playlist">
+            </ul>
+        </aside>
+
+        <main class="main">
+            <img id="cover_current" src="" alt="">
+            <footer class="footer cf">
+                <div class="user">
+                    Added by Barack Obama
+                </div>
+                <div class="current-song-info">
+                    <div id="song-name"></div>
+                    <div id="song-artist"></div>
+                    <div id="song-album"></div>
+                </div>
+                <div id="current-song-votes">
                     
-                 
                 </div>
-        
->>>>>>> Stashed changes
-            <div id="content"> 
-                <img class="albumart" src="pink-floyd.jpg" />
-                
-                
-                </div>
-           
-            <div id="footer">
-               <div id="firstpart">
-                   <img src="Juke_Box.PNG" />
-                <h2> Speak to me </h2>
-                <p>by Pink Floyed</p> 
-        </div>
-        <div id="second">
-             <img class="profile" src="img/male-shadow-fill-circle-512.png" />
-                <p1 > this song was added by</p1>           
-        </div>
-        </div>
+            </footer>
+        </main>
     
-    </div>
-<script>
-        var myDataRef = new Firebase('https://iwybibby18g.firebaseio-demo.com/');
-        </script>    </body>
+    <script src='web-resources/scripts.js'></script>
+    </body>
 </html>
     
